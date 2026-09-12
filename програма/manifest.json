@@ -1,0 +1,31 @@
+{
+  "name": "UKRAINE HORIZON RP",
+  "short_name": "UKRAINE HORIZON RP",
+  "description": "Crimea RP — офіційний сайт спільноти",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0b0b0f",
+  "theme_color": "#0b0b0f",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ]
+}

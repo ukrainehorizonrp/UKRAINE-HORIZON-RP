@@ -1,0 +1,487 @@
+/* --- Складані/дуже вузькі екрани --- */
+@media (max-width:320px){
+.hero{padding-top:68px!important;}
+.hero-text h1{font-size:1.35rem;}
+.hero-text p{font-size:.82rem;}
+.join-box{padding:12px;}
+.tab-btn{padding:7px 10px;font-size:.75rem;}
+.rules-grid,
+.roles-grid{
+grid-template-columns:1fr;
+}
+.staff-member{
+gap:10px;
+}
+.staff-member img{
+width:46px;
+height:46px;
+flex-shrink:0;
+object-fit:cover;
+}
+.staff-member-text{
+min-width:0;
+word-break:break-word;
+overflow-wrap:anywhere;
+}
+.review-arrow{
+width:34px;
+height:34px;
+}
+}
+
+/* --- Телефони і малі планшети --- */
+@media (max-width:775px){
+.hero{
+flex-direction:column!important;
+align-items:center!important;
+text-align:center;
+gap:16px!important;
+padding-top:70px!important;
+}
+.hero-text,
+.join-box{
+flex:0 1 auto!important;
+width:100%;
+display:flex;
+flex-direction:column;
+}
+.hero-text h1{
+font-size:1.75rem;
+}
+.hero-text p{
+font-size:.9375rem;
+}
+.join-row{
+justify-content:center;
+}
+.join-row-text{
+text-align:left;
+}
+.rules-grid,
+.roles-grid{
+grid-template-columns:1fr;
+}
+.join-box{
+width:100%;
+}
+.license-check-row{
+flex-direction:column;
+}
+.license-select,
+.license-input,
+.license-search-btn{
+width:100%;
+}
+.license-result-row{
+flex-direction:column;
+gap:4px;
+}
+
+.organ-select-box{
+width:100%;
+padding:0 4px;
+box-sizing:border-box;
+}
+.organ-buttons{
+gap:8px;
+}
+.organ-btn{
+padding:8px 14px;
+font-size:13px;
+}
+.organ-select-label{
+font-size:17px;
+}
+.organ-card{
+padding:18px;
+}
+.organ-name{
+font-size:20px;
+}
+.organ-section-title{
+font-size:16px;
+}
+
+.reviews-carousel{
+gap:8px;
+}
+.review-arrow{
+width:32px;
+height:32px;
+font-size:16px;
+flex-shrink:0;
+}
+.review-card{
+padding:16px;
+}
+.review-nick{
+font-size:15px;
+max-width:100%;
+overflow:hidden;
+text-overflow:ellipsis;
+white-space:nowrap;
+cursor:pointer;
+}
+.review-nick.expanded{
+white-space:normal;
+overflow:visible;
+text-overflow:clip;
+}
+.review-text{
+max-width:100%;
+}
+
+/* Виправлення карток ролей */
+
+.staff-member{
+display:flex;
+align-items:flex-start;
+gap:12px;
+min-width:0;
+}
+
+.staff-member img{
+width:52px;
+height:52px;
+flex-shrink:0;
+object-fit:cover;
+border-radius:50%;
+}
+
+.staff-member-text{
+flex:1;
+min-width:0;
+overflow-wrap:anywhere;
+word-break:break-word;
+}
+
+.staff-member-text b{
+font-size:14px;
+}
+
+.staff-member-text span{
+font-size:12px;
+}
+
+.modal-header span{
+font-size:16px;
+}
+
+.modal-body{
+padding:18px;
+}
+
+.article-title{
+font-size:18px;
+}
+
+.article-text{
+font-size:17px;
+}
+
+.image-lightbox img{
+max-width:95%;
+max-height:80%;
+}
+
+/* Галерея спільноти на мобільних: показуємо тільки перше фото + кнопка "Показати більше" */
+.gallery-photos{
+gap:10px;
+}
+.gallery-photos-row{
+flex-wrap:wrap;
+gap:10px;
+}
+.gallery-photos-row-top{
+justify-content:flex-start;
+}
+.gallery-photos-row-bottom{
+display:none;
+}
+.gallery-photos-row-top .gallery-photo:not(:first-child){
+display:none;
+}
+.gallery-photos-row-top .gallery-photo:first-child{
+flex:0 0 auto;
+width:100%;
+height:200px;
+}
+.gallery-card.gallery-expanded .gallery-photos-row-bottom {
+    display: flex !important;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.gallery-card.gallery-expanded .gallery-photos-row-bottom .gallery-photo {
+    display: block !important;
+    flex: 0 0 calc(50% - 5px);
+    width: calc(50% - 5px);
+    height: 120px;
+}
+.gallery-card.gallery-expanded .gallery-photos-row-top .gallery-photo:not(:first-child){
+display:block;
+flex:0 0 auto;
+width:calc(50% - 5px);
+height:120px;
+}
+.gallery-toggle-btn{
+display:block;
+width:100%;
+margin-top:10px;
+padding:10px 14px;
+border-radius:10px;
+border:1px solid rgba(255,255,255,0.18);
+background:rgba(255,255,255,0.06);
+color:#fff;
+font-size:13px;
+font-weight:700;
+cursor:pointer;
+}
+.gallery-toggle-btn:active{
+background:rgba(255,77,77,0.25);
+}
+}
+
+/* --- Великі телефони (Plus / Pro Max) --- */
+@media (min-width:481px) and (max-width:775px){
+.rules-grid,
+.roles-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+/* --- Вузькі планшети / малі ноутбуки --- */
+@media (min-width:776px){
+.hero{
+flex-wrap:nowrap;
+gap:clamp(16px,3vw,32px);
+}
+.hero-text{
+flex:1 1 auto;
+max-width:560px;
+min-width:0;
+}
+.join-box{
+flex:0 0 340px;
+width:340px;
+min-width:320px;
+}
+}
+
+/* --- Планшети (iPad, Android) --- */
+@media (min-width:776px) and (max-width:1024px){
+.rules-grid,
+.roles-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+
+/* --- Full HD --- */
+@media (min-width:1440px){
+.rules-grid,
+.roles-grid{
+grid-template-columns:repeat(3,1fr);
+}
+}
+
+/* --- Великі монітори / 2K+ --- */
+@media (min-width:1920px){
+.hero-text{
+max-width:680px;
+}
+.rules-grid,
+.roles-grid{
+grid-template-columns:repeat(4,1fr);
+}
+}
+
+/* --- 4K --- */
+@media (min-width:2560px){
+html{
+font-size:18px;
+}
+}
+
+/* --- Galaxy Fold --- */
+@media (max-width:280px){
+.rules-grid,
+.roles-grid{
+grid-template-columns:1fr;
+}
+.hero-text h1{
+font-size:1.2rem;
+}
+}
+
+/* --- Альбомна орієнтація --- */
+@media (max-height:480px) and (orientation:landscape){
+.hero{
+padding-top:50px;
+}
+.modal-box{
+max-height:92vh;
+}
+}
+
+/* --- Тач-екрани --- */
+@media (hover:none) and (pointer:coarse){
+.tab-btn,
+.rule-card,
+.role-card,
+#copyBtn,
+.license-search-btn,
+#modalClose,
+#staffModalClose{
+min-height:44px;
+touch-action:manipulation;
+}
+}
+
+/* --- Safari (iPhone/iPad) --- */
+@supports (-webkit-touch-callout:none){
+
+body{
+-webkit-overflow-scrolling:touch;
+}
+
+input,
+textarea,
+select{
+font-size:16px;
+}
+
+.staff-member{
+align-items:flex-start;
+}
+
+.staff-member img{
+object-fit:cover;
+}
+
+.modal-box{
+max-height:90dvh;
+}
+
+}
+
+/* --- Firefox --- */
+@supports (-moz-appearance:none){
+
+.rule-card,
+.role-card,
+.review-card{
+overflow:hidden;
+}
+
+}
+
+/* ===================== Врахування вирізів iPhone (Safe Area) ===================== */
+.clock{
+top:max(20px,env(safe-area-inset-top));
+right:max(24px,env(safe-area-inset-right));
+}
+
+.hero,
+.menu-tabs{
+padding-left:max(clamp(16px,6vw,80px),env(safe-area-inset-left));
+padding-right:max(clamp(16px,6vw,80px),env(safe-area-inset-right));
+}
+
+html{
+overscroll-behavior-y:contain;
+-webkit-text-size-adjust:100%;
+}
+
+body{
+min-height:100vh;
+min-height:100svh;
+min-height:100dvh;
+overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+}
+
+img,
+svg{
+max-width:100%;
+height:auto;
+}
+
+.hero-text h1,
+.hero-text p,
+h1,h2,h3,p,span,b,a{
+overflow-wrap:anywhere;
+word-break:break-word;
+}
+
+.join-box{
+max-width:min(420px,100%);
+box-sizing:border-box;
+}
+
+/* ===================== Іконки + назви меню на середніх і вузьких екранах =====================*/
+
+@media (max-width:1150px){
+.menu-tabs{
+gap:8px;
+}
+.tab-btn{
+padding:9px 15px;
+font-size:13px;
+gap:7px;
+}
+.tab-btn svg{
+width:17px;
+height:17px;
+}
+}
+
+@media (max-width:480px){
+.menu-tabs{
+gap:6px;
+}
+.tab-btn{
+padding:8px 12px;
+font-size:12px;
+gap:6px;
+}
+.tab-btn svg{
+width:16px;
+height:16px;
+}
+}
+
+@media (max-width:360px){
+.tab-btn{
+padding:7px 10px;
+font-size:11px;
+gap:5px;
+}
+}
+
+@media (max-width:320px){
+.tab-btn{
+padding:6px 8px;
+font-size:10px;
+gap:4px;
+}
+.tab-btn svg{
+width:14px;
+height:14px;
+}
+}
+
+
+@media (max-width:768px){
+#licenses .reviews-header{
+flex-direction:column;
+align-items:stretch;
+gap:10px;
+text-align:center;
+}
+}
