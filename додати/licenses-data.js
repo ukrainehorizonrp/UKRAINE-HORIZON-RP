@@ -20,11 +20,23 @@ const licensesData = [
       validFrom: "10.09.2026",
       validTo: "10.09.2027"
      },
+
+ // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
+
+      {
+      number: "24501",
+      type: "mafia",
+      mafiaName: "Родина Корлеоне",
+      nick: "Zoomsos123",
+      validFrom: "10.09.2026",
+      validTo: "10.09.2027"
+     },
 ];
 
 
 const licenseTypeNames = {
   "advocate": "Ліцензія адвоката",
   "weapon": "Ліцензія на зброю",
+  "mafia": "Ліцензія на мафію",
 
 };

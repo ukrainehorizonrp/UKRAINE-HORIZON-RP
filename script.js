@@ -714,19 +714,34 @@ function highlightText(text, query) {
 
     const found = licensesData.find(lic =>
       lic.type === type &&
-      (lic.nick.toLowerCase() === query || String(lic.number) === query)
+      (lic.nick.toLowerCase() === query ||
+        String(lic.number) === query ||
+        (lic.mafiaName && lic.mafiaName.toLowerCase() === query))
     );
 
     if (found) {
-      result.innerHTML = `
-        <div class="license-result-card">
-          <span class="license-result-status"> Ліцензія дійсна</span>
-          <div class="license-result-row"><span>Нік гравця</span><span>${found.nick}</span></div>
-          <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
-          <div class="license-result-row"><span>Термін дії</span><span>${found.validFrom} — ${found.validTo}</span></div>
-          <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
-        </div>
-      `;
+      if (found.type === "mafia") {
+        result.innerHTML = `
+          <div class="license-result-card">
+            <span class="license-result-status"> Ліцензія дійсна</span>
+            <div class="license-result-row"><span>Ім'я мафії</span><span>${found.mafiaName}</span></div>
+            <div class="license-result-row"><span>Власник мафії</span><span>${found.nick}</span></div>
+            <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
+            <div class="license-result-row"><span>Термін дії</span><span>${found.validFrom} — ${found.validTo}</span></div>
+            <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
+          </div>
+        `;
+      } else {
+        result.innerHTML = `
+          <div class="license-result-card">
+            <span class="license-result-status"> Ліцензія дійсна</span>
+            <div class="license-result-row"><span>Нік гравця</span><span>${found.nick}</span></div>
+            <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
+            <div class="license-result-row"><span>Термін дії</span><span>${found.validFrom} — ${found.validTo}</span></div>
+            <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
+          </div>
+        `;
+      }
     } else {
       result.innerHTML = `
         <div class="license-result-card invalid">

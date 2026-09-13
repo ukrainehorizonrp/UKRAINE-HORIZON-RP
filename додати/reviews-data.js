@@ -12,7 +12,7 @@ const reviewsData = [
   },
   {
     nick: "Caston08963",
-    avatar: "https://i.postimg.cc/Qt35V1cv/image-(17).webp",
+    avatar: "https://i.postimg.cc/HL9rQGz1/image.webp",
     text: "Мені сподобався цей сервер. Він дуже крутий, добре оптимізований і має чудово пропрацьовані правила для RP. Колектив і гравці класні, з ними приємно спілкуватися",
     rating: 5,
     date: "25.07.2026"
