@@ -1,4 +1,4 @@
-const CACHE_VERSION = "v1.1.17";
+const CACHE_VERSION = "v1.1.18";
 const CACHE_NAME = "crimearp-cache-" + CACHE_VERSION;
 
 const PRECACHE_URLS = [
