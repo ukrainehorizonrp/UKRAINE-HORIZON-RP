@@ -31,6 +31,17 @@ const licensesData = [
       validFrom: "10.09.2026",
       validTo: "10.09.2027"
      },
+
+ // ==================== ЗВАННЯ НПУ ====================
+
+      {
+      number: "1042",              
+      type: "npu",
+      nick: "Zoomsos123",          
+      rank: "Капітан поліції",     
+      validFrom: "10.09.2026",
+      validTo: "10.09.2027"
+     },
 ];
 
 
@@ -38,5 +49,6 @@ const licenseTypeNames = {
   "advocate": "Ліцензія адвоката",
   "weapon": "Ліцензія на зброю",
   "mafia": "Ліцензія на мафію",
+  "npu": "Звання НПУ",
 
 };

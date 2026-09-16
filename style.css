@@ -532,7 +532,7 @@ img {
   border-radius: 12px;
   padding: 20px;
   color: #ffffff;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   touch-action: manipulation;
@@ -731,7 +731,7 @@ img {
 
 .article-title {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
   text-align: center;
   letter-spacing: 0.3px;
@@ -755,7 +755,7 @@ img {
 
 .article-text {
   color: #eef1f6;
-  font-size: 17.5px;
+  font-size: 15.5px;
   line-height: 1.75;
   margin-bottom: 14px;
 }
@@ -772,7 +772,7 @@ img {
   background: rgba(255, 77, 77, 0.14);
   border: 1px solid rgba(255, 77, 77, 0.3);
   color: #ffb8b8;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
   padding: 14px 18px;
@@ -978,7 +978,7 @@ img {
 
 .organ-section-text {
   color: #eef1f6;
-  font-size: 14.5px;
+  font-size: 16px;
   line-height: 1.7;
 }
 
