@@ -727,7 +727,6 @@ function highlightText(text, query) {
             <div class="license-result-row"><span>Roblox username</span><span>${found.nick}</span></div>
             <div class="license-result-row"><span>Офіцерський жетон</span><span>${found.number}</span></div>
             <div class="license-result-row"><span>Звання</span><span>${found.rank}</span></div>
-            <div class="license-result-row"><span>Термін дії</span><span>${found.validFrom} — ${found.validTo}</span></div>
           </div>
         `;
       } else if (found.type === "mafia") {
@@ -736,8 +735,6 @@ function highlightText(text, query) {
             <span class="license-result-status"> Ліцензія дійсна</span>
             <div class="license-result-row"><span>Ім'я мафії</span><span>${found.mafiaName}</span></div>
             <div class="license-result-row"><span>Власник мафії</span><span>${found.nick}</span></div>
-            <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
-            <div class="license-result-row"><span>Термін дії</span><span>${found.validFrom} — ${found.validTo}</span></div>
             <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
           </div>
         `;

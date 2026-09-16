@@ -28,8 +28,6 @@ const licensesData = [
       type: "mafia",
       mafiaName: "Родина Корлеоне",
       nick: "Zoomsos123",
-      validFrom: "10.09.2026",
-      validTo: "10.09.2027"
      },
 
  // ==================== ЗВАННЯ НПУ ====================
@@ -39,8 +37,6 @@ const licensesData = [
       type: "npu",
       nick: "artemMelnichenko2013",          
       rank: "Генерал поліції 1 рангу",     
-      validFrom: "10.09.2026",
-      validTo: "10.09.2027"
      },
 ];
 
