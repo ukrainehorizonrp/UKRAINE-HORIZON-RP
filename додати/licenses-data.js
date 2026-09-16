@@ -35,7 +35,7 @@ const licensesData = [
  // ==================== ЗВАННЯ НПУ ====================
 
       {
-      number: "1042",              
+      number: "33693",              
       type: "npu",
       nick: "artemMelnichenko2013",          
       rank: "Генерал поліції 1 рангу",     
