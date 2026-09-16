@@ -37,8 +37,8 @@ const licensesData = [
       {
       number: "1042",              
       type: "npu",
-      nick: "Zoomsos123",          
-      rank: "Капітан поліції",     
+      nick: "artemMelnichenko2013",          
+      rank: "Генерал поліції 1 рангу",     
       validFrom: "10.09.2026",
       validTo: "10.09.2027"
      },
