@@ -738,6 +738,15 @@ function highlightText(text, query) {
             <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
           </div>
         `;
+      } else if (found.type === "advocate") {
+        result.innerHTML = `
+          <div class="license-result-card">
+            <span class="license-result-status"> Ліцензія дійсна</span>
+            <div class="license-result-row"><span>Нік гравця</span><span>${found.nick}</span></div>
+            <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
+            <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
+          </div>
+        `;
       } else {
         result.innerHTML = `
           <div class="license-result-card">

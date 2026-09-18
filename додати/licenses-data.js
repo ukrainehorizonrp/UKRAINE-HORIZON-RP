@@ -17,17 +17,21 @@ const licensesData = [
       number: "13298",
       type: "advocate",
       nick: "Zoomsos123",
-      validFrom: "10.09.2026",
-      validTo: "10.09.2027"
+     },
+
+     {
+      number: "12334",
+      type: "advocate",
+      nick: "Arseniy_zabanen",
      },
 
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
 
-      {
-      number: "24501",
+     {
+      number: "24440",
       type: "mafia",
-      mafiaName: "Родина Корлеоне",
-      nick: "Zoomsos123",
+      mafiaName: "CNx",
+      nick: "Yffgjjifh",
      },
 
  // ==================== ЗВАННЯ НПУ ====================
