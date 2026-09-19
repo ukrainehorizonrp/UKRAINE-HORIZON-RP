@@ -43,12 +43,18 @@ const licensesData = [
       rank: "Роль Звання",     
     }, */
 
-      {
+    {
       number: "33693",              
       type: "npu",
       nick: "artemMelnichenko2013",          
       rank: "Генерал поліції 1 рангу",     
-     },
+    },
+    {
+      number: "38602",              
+      type: "npu",
+      nick: "Kirilkleo123425",          
+      rank: "Підполковник поліції",     
+    },
 ];
 
 
