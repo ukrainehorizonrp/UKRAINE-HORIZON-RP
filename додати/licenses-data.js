@@ -55,6 +55,12 @@ const licensesData = [
       nick: "Kirilkleo123425",          
       rank: "Підполковник поліції",     
     },
+    {
+      number: "38563",     
+      type: "npu",        
+      nick: "Maksimka20131411",          
+      rank: "Полковник поліції",         
+    },
 ];
 
 
