@@ -10,6 +10,13 @@ const licensesData = [
       validFrom: "10.09.2026",
       validTo: "10.09.2027"
      },
+     {
+      number: "07758",
+      type: "weapon-storage",
+      nick: "agency_roblox4",
+      validFrom: "20.09.2026",
+      validTo: "20.09.2027"
+     },
 
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
@@ -18,11 +25,15 @@ const licensesData = [
       type: "advocate",
       nick: "Zoomsos123",
      },
-
      {
       number: "12334",
       type: "advocate",
       nick: "Arseniy_zabanen",
+     },
+     {
+      number: "18853",
+      type: "advocate",
+      nick: "eeeeyegeggegehux",
      },
 
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
