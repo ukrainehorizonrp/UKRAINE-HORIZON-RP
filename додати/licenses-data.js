@@ -12,7 +12,7 @@ const licensesData = [
      },
      {
       number: "07758",
-      type: "weapon-storage",
+      type: "weapon",
       nick: "agency_roblox4",
       validFrom: "20.09.2026",
       validTo: "20.09.2027"
