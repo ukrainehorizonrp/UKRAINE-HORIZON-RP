@@ -61,6 +61,24 @@ const licensesData = [
       nick: "Maksimka20131411",          
       rank: "Полковник поліції",         
     },
+    {
+      number: "31938",     
+      type: "npu",        
+      nick: "Labyby_9999",          
+      rank: "Капітан поліції",         
+    },
+    {
+      number: "38461",     
+      type: "npu",        
+      nick: "3cy_77781046",          
+      rank: "Генерал поліції 3-го рангу",         
+    },
+    {
+      number: "37183",     
+      type: "npu",        
+      nick: "VAUIA1233",          
+      rank: "Генерал поліції 3-го рангу",         
+    },
 ];
 
 

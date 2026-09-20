@@ -51,6 +51,18 @@ const staffData = {
          telegram: "https://t.me/Erorse",
          avatar: "https://i.postimg.cc/3WMhkTJK/image-(13).webp"
         },
+        {
+         name: "Заступник Генерального прокурора",
+         nick: "agency_roblox4",
+         telegram: "https://t.me/feqohe",
+         avatar: "https://i.postimg.cc/zv4n6tbf/image-(3).webp"
+        },
+        {
+         name: "Прокурор",
+         nick: "XxsSashaxxjj",
+         telegram: "https://t.me/XxsSashaxxjj",
+         avatar: "https://i.postimg.cc/NGZJWpwT/image-(4).webp"
+        },
        
     ]
   },
