@@ -77,7 +77,9 @@ const licensesData = [
       number: "37183",     
       type: "npu",        
       nick: "VAUIA1233",          
-      rank: "Генерал поліції 3-го рангу",         
+      rank: "Підполковник поліціїgit add .
+git commit -m "опис змін"
+git push",         
     },
 ];
 
