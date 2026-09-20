@@ -81,6 +81,13 @@ const licensesData = [
 git commit -m "опис змін"
 git push",         
     },
+
+    {
+      number: "09397",
+      type: "npu",
+      nick: "Itz_Raose",
+      rank: "Тест",
+    },
 ];
 
 
