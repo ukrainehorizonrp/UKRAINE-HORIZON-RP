@@ -9,25 +9,20 @@ function debounce(fn, wait = 180) {
 }
 
 
-const imageLazyObserver = new IntersectionObserver((entries) => {
+const imageLazyObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
     const img = entry.target;
     const src = img.dataset.src;
-    if (!src) return;
-
-    if (entry.isIntersecting) {
-      if (img.getAttribute("src") !== src) {
-        img.setAttribute("src", src);
-      }
-    } else if (img.getAttribute("src")) {
-      img.removeAttribute("src");
-    }
+    if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
+    obs.unobserve(img); // після завантаження більше не стежимо і src не видаляємо
   });
-}, {
-  root: null,
-  rootMargin: "600px 0px", 
-  threshold: 0.01
-});
+}, { root: null, rootMargin: "600px 0px", threshold: 0.01 });
+
+// Екранування тексту, щоб дані не ламали HTML
+function esc(str) {
+  return String(str ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
 
 function observeLazyImages(container) {
   if (!container) return;
@@ -121,7 +116,11 @@ function restartCardAnimations(container) {
   }
 
   function openTab(id, updateHash) {
-    buttons.forEach(b => b.classList.toggle("active", b.getAttribute("data-tab") === id));
+    buttons.forEach(b => {
+      const on = b.getAttribute("data-tab") === id;
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-selected", on ? "true" : "false");
+    });
     contents.forEach(c => c.classList.toggle("active", c.id === id));
 
     const target = document.getElementById(id);
@@ -131,6 +130,9 @@ function restartCardAnimations(container) {
       setHash(TAB_HASH_MAP[id]);
     }
   }
+
+  buttons.forEach(button => button.setAttribute("role", "tab"));
+  contents.forEach(c => c.setAttribute("role", "tabpanel"));
 
   buttons.forEach(button => {
     button.addEventListener("click", () => {
@@ -201,7 +203,7 @@ function highlightText(text, query) {
   const STEP_DELAY = 0.12; 
 
   
-  const INITIAL_REVEAL_DELAY = 1.9;
+  const INITIAL_REVEAL_DELAY = 1.3;
   const INITIAL_STEP_DELAY = 0.12; 
   let isFirstRender = true;
 
@@ -349,10 +351,10 @@ function highlightText(text, query) {
     const avatar = member.avatar || "https://via.placeholder.com/68";
     return `
       <div class="staff-member">
-        <img data-src="${avatar}" alt="" decoding="async">
+        <img data-src="${esc(avatar)}" alt="" decoding="async">
         <div class="staff-member-text">
-          <b>${member.name}</b>
-          <span>Username: ${member.nick}</span><br>
+          <b>${esc(member.name)}</b>
+          <span>Username: ${esc(member.nick)}</span><br>
           <a href="${member.telegram}" target="_blank" rel="noopener">Telegram</a>
         </div>
       </div>
@@ -372,7 +374,7 @@ function highlightText(text, query) {
   }
 
 
-  const ROLES_INITIAL_REVEAL_DELAY = 2.15;
+  const ROLES_INITIAL_REVEAL_DELAY = 1.4;
   const ROLES_INITIAL_STEP_DELAY = 0.12; 
   const ROLES_BASE_DELAY = 0.15;
   const ROLES_STEP_DELAY = 0.12; 
@@ -409,6 +411,9 @@ function highlightText(text, query) {
   staffModalOverlay.addEventListener("click", (e) => {
     if (e.target === staffModalOverlay) staffModalOverlay.classList.remove("active");
   });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") staffModalOverlay.classList.remove("active");
+  });
 
   staffSearch.addEventListener("input", debounce(() => {
     const query = staffSearch.value.trim().toLowerCase();
@@ -418,7 +423,7 @@ function highlightText(text, query) {
     let found = 0;
     Object.keys(staffData).forEach(key => {
       staffData[key].members.forEach(member => {
-        const nickMatch = member.nick.toLowerCase().startsWith(query);
+        const nickMatch = member.nick.toLowerCase().includes(query);
         const tgMatch = member.telegram.toLowerCase().includes(query);
         if (nickMatch || tgMatch) {
           found++;
@@ -494,7 +499,7 @@ function highlightText(text, query) {
     `<button type="button" class="organ-btn" data-index="${i}">${o.name}</button>`
   ).join("");
 
-  animateCardsIn([...organButtons.children], 1.9, 0.1);
+  animateCardsIn([...organButtons.children], 1.3, 0.08);
 
   organButtons.addEventListener("click", (e) => {
     const btn = e.target.closest(".organ-btn");
@@ -660,7 +665,7 @@ function highlightText(text, query) {
     `<button type="button" class="organ-btn" data-key="${key}">${codesData[key].name}</button>`
   ).join("");
 
-  animateCardsIn([...codeTypeButtons.children], 1.9, 0.1);
+  animateCardsIn([...codeTypeButtons.children], 1.3, 0.08);
 
   codeTypeButtons.addEventListener("click", (e) => {
     const btn = e.target.closest(".organ-btn");
@@ -720,57 +725,39 @@ function highlightText(text, query) {
     );
 
     if (found) {
+      const row = (label, value) => `<div class="license-result-row"><span>${label}</span><span>${esc(value)}</span></div>`;
+      const term = (found.validFrom && found.validTo) ? row("Термін дії", `${found.validFrom} — ${found.validTo}`) : "";
+      let rows;
+      let status = "Ліцензія дійсна";
+
       if (found.type === "npu") {
-        result.innerHTML = `
-          <div class="license-result-card">
-            <span class="license-result-status"> Звання підтверджено</span>
-            <div class="license-result-row"><span>Roblox username</span><span>${found.nick}</span></div>
-            <div class="license-result-row"><span>Офіцерський жетон</span><span>${found.number}</span></div>
-            <div class="license-result-row"><span>Звання</span><span>${found.rank}</span></div>
-          </div>
-        `;
+        status = "Звання підтверджено";
+        rows = row("Roblox username", found.nick) + row("Офіцерський жетон", found.number) + row("Звання", found.rank);
       } else if (found.type === "mafia") {
-        result.innerHTML = `
-          <div class="license-result-card">
-            <span class="license-result-status"> Ліцензія дійсна</span>
-            <div class="license-result-row"><span>Ім'я мафії</span><span>${found.mafiaName}</span></div>
-            <div class="license-result-row"><span>Власник мафії</span><span>${found.nick}</span></div>
-            <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
-          </div>
-        `;
-      } else if (found.type === "advocate") {
-        result.innerHTML = `
-          <div class="license-result-card">
-            <span class="license-result-status"> Ліцензія дійсна</span>
-            <div class="license-result-row"><span>Нік гравця</span><span>${found.nick}</span></div>
-            <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
-            <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
-          </div>
-        `;
+        rows = row("Ім'я мафії", found.mafiaName) + row("Власник мафії", found.nick) + term + row("Номер ліцензії", found.number);
       } else {
-        result.innerHTML = `
-          <div class="license-result-card">
-            <span class="license-result-status"> Ліцензія дійсна</span>
-            <div class="license-result-row"><span>Нік гравця</span><span>${found.nick}</span></div>
-            <div class="license-result-row"><span>Тип ліцензії</span><span>${licenseTypeNames[found.type]}</span></div>
-            <div class="license-result-row"><span>Термін дії</span><span>${found.validFrom} — ${found.validTo}</span></div>
-            <div class="license-result-row"><span>Номер ліцензії</span><span>${found.number}</span></div>
-          </div>
-        `;
+        rows = row("Нік гравця", found.nick) + row("Тип ліцензії", licenseTypeNames[found.type] || found.type) + term + row("Номер ліцензії", found.number);
       }
+
+      result.innerHTML = `
+        <div class="license-result-card">
+          <span class="license-result-status">${status}</span>
+          ${rows}
+        </div>
+      `;
     } else {
       result.innerHTML = `
         <div class="license-result-card invalid">
-          <span class="license-result-status invalid"> Ліцензію не знайдено</span>
-          <div class="license-result-row"><span>Запит</span><span>${query}</span></div>
-          <div class="license-result-row"><span>Категорія</span><span>${licenseTypeNames[type]}</span></div>
+          <span class="license-result-status invalid">Ліцензію не знайдено</span>
+          <div class="license-result-row"><span>Запит</span><span>${esc(query)}</span></div>
+          <div class="license-result-row"><span>Категорія</span><span>${esc(licenseTypeNames[type] || type)}</span></div>
         </div>
       `;
     }
   }
 
   searchBtn.addEventListener("click", checkLicense);
-  nickInput.addEventListener("keypress", (e) => {
+  nickInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkLicense();
   });
 
@@ -848,10 +835,10 @@ reviewCard.innerHTML = `
 
         <div class="review-left">
 
-            <img src="${review.avatar}" class="review-avatar" alt="" loading="lazy" decoding="async">
+            <img src="${esc(review.avatar)}" class="review-avatar" alt="" loading="lazy" decoding="async">
 
             <div class="review-meta">
-                <div class="review-nick">${review.nick}</div>
+                <div class="review-nick">${esc(review.nick)}</div>
             </div>
 
         </div>
@@ -864,7 +851,7 @@ reviewCard.innerHTML = `
     </div>
 
     <div class="review-text">
-        ${review.text}
+        ${esc(review.text)}
     </div>
 
 </div>
@@ -904,15 +891,24 @@ reviewCard.innerHTML = `
 })();
 
 
-(()=>{
-const bg=document.querySelector(".bg");
-if(!bg)return;
+(() => {
+  const bg = document.querySelector(".bg");
+  if (!bg) return;
+  // Паралакс лише для миші та без "зменшення руху"
+  if (!window.matchMedia("(hover:hover) and (pointer:fine)").matches) return;
 
-window.addEventListener("mousemove",e=>{
-const x=(e.clientX/window.innerWidth-.5)*8;
-const y=(e.clientY/window.innerHeight-.5)*8;
-bg.style.transform=`translate(${x}px,${y}px) scale(1.03)`;
-},{passive:true});
+  let ticking = false, mx = 0, my = 0;
+  window.addEventListener("mousemove", (e) => {
+    mx = e.clientX; my = e.clientY;
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const x = (mx / window.innerWidth - .5) * 8;
+      const y = (my / window.innerHeight - .5) * 8;
+      bg.style.transform = `translate(${x}px,${y}px) scale(1.03)`;
+      ticking = false;
+    });
+  }, { passive: true });
 })();
 
 

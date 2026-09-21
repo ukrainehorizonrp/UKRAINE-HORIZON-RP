@@ -3,26 +3,13 @@ const licensesData = [
 
   // ==================== ЛІЦЕНЗІЇ НА ЗБРОЮ ====================
 
-     {
-      number: "03398",
-      type: "weapon-storage",
-      nick: "Zoomsos123",
-      validFrom: "10.09.2026",
-      validTo: "10.09.2027"
-     },
+     // ВИДАЛЕНО: тип weapon-storage не використовується (запис Zoomsos123, 03398)
      {
       number: "07758",
       type: "weapon",
       nick: "agency_roblox4",
       validFrom: "20.09.2026",
       validTo: "20.09.2027"
-     },
-     {
-      number: "03772",
-      type: "weapon",
-      nick: "Yffgjjifh",
-      validFrom: "21.09.2026",
-      validTo: "21.09.2027"
      },
 
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
@@ -41,6 +28,11 @@ const licensesData = [
       number: "18853",
       type: "advocate",
       nick: "eeeeyegeggegehux",
+     },
+     {
+      number: "03772",
+      type: "advocate",
+      nick: "Yffgjjifh",
      },
 
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
@@ -97,18 +89,7 @@ const licensesData = [
       nick: "VAUIA1233",          
       rank: "Старший лейтенант поліції",         
     },
-    {
-      number: "37183",     
-      type: "npu",        
-      nick: "Rechs10",          
-      rank: "Старший лейтенант поліції",         
-    },
-    {
-      number: "38593",     
-      type: "npu",        
-      nick: "Sti4kyy",          
-      rank: "Старший лейтенант поліції",         
-    },
+    // ВИДАЛЕНО: дубль номера 37183 (він належить VAUIA1233). Rechs10 має номер 38824.
     {
       number: "38593",     
       type: "npu",        
