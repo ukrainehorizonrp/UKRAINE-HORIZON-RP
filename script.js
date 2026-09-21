@@ -1,5 +1,84 @@
 "use strict";
 
+(function autoUpdateOnEntry() {
+  const GUARD_KEY = "autoReloadAt";
+  const GUARD_MS = 60000;
+  const TIMEOUT_MS = 2500;
+  const IMAGE_RE = /\.(png|jpe?g|webp|gif|svg|avif|ico)(\?|$)/i;
+
+  try {
+    const last = Number(sessionStorage.getItem(GUARD_KEY) || 0);
+    if (Date.now() - last < GUARD_MS) return;
+  } catch (e) {
+    return;
+  }
+
+  const found = new Set([location.href.split("#")[0]]);
+  document.querySelectorAll("script[src], link[href], img[src]").forEach((el) => {
+    const u = el.src || el.href;
+    if (u) found.add(u.split("#")[0]);
+  });
+  performance.getEntriesByType("resource").forEach((e) => found.add(e.name.split("#")[0]));
+  const bg = document.querySelector(".bg");
+  if (bg) {
+    for (const m of getComputedStyle(bg).backgroundImage.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
+      found.add(m[1]);
+    }
+  }
+
+  const urls = [...found].filter((u) => {
+    try { return new URL(u).origin === location.origin; } catch (e) { return false; }
+  });
+
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), TIMEOUT_MS);
+
+  const signature = (res) => {
+    const tag = res.headers.get("etag") || res.headers.get("last-modified");
+    return tag ? tag.replace(/^W\//, "") : null;
+  };
+
+  async function fileChanged(url) {
+    const [cached, fresh] = await Promise.all([
+      fetch(url, { cache: "force-cache", signal: ctl.signal }),
+      fetch(url, { method: "HEAD", cache: "no-store", priority: "high", signal: ctl.signal })
+    ]);
+    if (!cached.ok || !fresh.ok) return false;
+    const a = signature(cached);
+    const b = signature(fresh);
+    return Boolean(a && b && a !== b);
+  }
+
+  const changed = new Set();
+
+  function anyChanged() {
+    return new Promise((resolve) => {
+      let left = urls.length;
+      if (left === 0) return resolve(false);
+      urls.forEach((u) => {
+        fileChanged(u)
+          .then((ch) => { if (ch) { changed.add(u); resolve(true); } })
+          .catch(() => {})
+          .finally(() => { if (--left === 0) resolve(false); });
+      });
+    });
+  }
+
+  (async () => {
+    try {
+      const has = await anyChanged();
+      clearTimeout(timer);
+      if (!has) return;
+
+      sessionStorage.setItem(GUARD_KEY, String(Date.now()));
+      const toRefresh = urls.filter((u) => changed.has(u) || !IMAGE_RE.test(u));
+      await Promise.all(toRefresh.map((u) => fetch(u, { cache: "reload" }).catch(() => {})));
+      location.reload();
+    } catch (e) {}
+  })();
+})();
+
+
 function debounce(fn, wait = 180) {
   let timer = null;
   return function (...args) {
@@ -15,11 +94,10 @@ const imageLazyObserver = new IntersectionObserver((entries, obs) => {
     const img = entry.target;
     const src = img.dataset.src;
     if (src && img.getAttribute("src") !== src) img.setAttribute("src", src);
-    obs.unobserve(img); // після завантаження більше не стежимо і src не видаляємо
+    obs.unobserve(img);
   });
 }, { root: null, rootMargin: "600px 0px", threshold: 0.01 });
 
-// Екранування тексту, щоб дані не ламали HTML
 function esc(str) {
   return String(str ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
@@ -74,9 +152,6 @@ function animateCardsIn(cards, startDelay = 0.15, stepDelay = 0.10, duration = 0
                 card.style.opacity="1";
                 card.style.transform="translate3d(0,0,0) scale(1)";
 
-                // Прибираємо willChange одразу після завершення переходу -
-                // інакше браузер тримає шар у GPU-пам'яті нескінченно,
-                // навіть коли картка вже давно нерухома.
                 const clearWillChange = () => {
                     card.style.willChange = "auto";
                     card.removeEventListener("transitionend", clearWillChange);
@@ -99,7 +174,6 @@ function animateCardsIn(cards, startDelay = 0.15, stepDelay = 0.10, duration = 0
 function restartCardAnimations(container) {
     if (!container) return;
 
-    // Спочатку перезапускаємо заголовок і поле пошуку (вони йдуть першими)
     const heading = container.querySelector("h2");
     const searchInput = container.querySelector(".text-input");
     [heading, searchInput].forEach(el => {
@@ -894,7 +968,6 @@ reviewCard.innerHTML = `
 (() => {
   const bg = document.querySelector(".bg");
   if (!bg) return;
-  // Паралакс лише для миші та без "зменшення руху"
   if (!window.matchMedia("(hover:hover) and (pointer:fine)").matches) return;
 
   let ticking = false, mx = 0, my = 0;
