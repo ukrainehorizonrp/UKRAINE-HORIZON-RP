@@ -34,6 +34,11 @@ const licensesData = [
       type: "advocate",
       nick: "Yffgjjifh",
      },
+     {
+      number: "03512",
+      type: "advocate",
+      nick: "Mykhailo_Zaya1",
+     },
 
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
 
@@ -89,7 +94,6 @@ const licensesData = [
       nick: "VAUIA1233",          
       rank: "Старший лейтенант поліції",         
     },
-    // ВИДАЛЕНО: дубль номера 37183 (він належить VAUIA1233). Rechs10 має номер 38824.
     {
       number: "38593",     
       type: "npu",        
