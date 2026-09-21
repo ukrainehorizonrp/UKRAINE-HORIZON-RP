@@ -23,15 +23,16 @@ const staffData = {
          telegram: "https://t.me/Shu75422",
          avatar: "https://i.postimg.cc/Zq48kxsH/image-(2).webp"
         },
+
     ]
   },
 
   // ==================== СУД ====================
   court: {
-    title: "Судова влада України (СВУ)",
+    title: "Суд",
     members: [
         {
-         name: "Суддя",
+         name: "Головний Суддя",
          nick: "Caston08963",
          telegram: "https://t.me/Obs1dianch1k",
          avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"

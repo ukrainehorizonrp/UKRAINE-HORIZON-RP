@@ -64,38 +64,37 @@ const licensesData = [
       number: "38602",              
       type: "npu",
       nick: "Kirilkleo123425",          
-      rank: "Підполковник поліції",     
+      rank: "Лейтенант поліції",     
     },
     {
       number: "38563",     
       type: "npu",        
       nick: "Maksimka20131411",          
-      rank: "Полковник поліції",         
+      rank: "Лейтенант поліції",         
     },
     {
       number: "31938",     
       type: "npu",        
       nick: "Labyby_9999",          
-      rank: "Капітан поліції",         
+      rank: "Лейтенант поліції",         
     },
     {
       number: "38461",     
       type: "npu",        
       nick: "3cy_77781046",          
-      rank: "Генерал поліції 3-го рангу",         
+      rank: "Лейтенант поліції",         
     },
     {
       number: "37183",     
       type: "npu",        
       nick: "VAUIA1233",          
-      rank: "Підполковник поліції",         
+      rank: "Лейтенант поліції",         
     },
-
     {
-      number: "09397",
-      type: "npu",
-      nick: "Itz_Raose",
-      rank: "Тест",
+      number: "37183",     
+      type: "npu",        
+      nick: "Rechs10",          
+      rank: "Лейтенант поліції",         
     },
 ];
 
