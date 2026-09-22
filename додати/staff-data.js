@@ -12,9 +12,15 @@ const staffData = {
          avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
         },
         {
-         name: "Головний адміністратор",
+         name: "Головний Адміністратор R5 ранга",
+         nick: "va1ron4", 
+         telegram: "https://t.me/cryptoqwee",
+         avatar: "https://i.postimg.cc/7hmrxT3j/image-(6).webp"
+        },
+        {
+         name: "Інспектор Службового Контролю (ІСК) R4 ранга",
          nick: "mummu228kuku", 
-         telegram: "https://t.me/here_everyone",
+         telegram: "https://t.me/massiveblick",
          avatar: "https://i.postimg.cc/dV4fXFPK/image-(12).webp"
         },
         {
@@ -44,16 +50,22 @@ const staffData = {
     title: "Суд",
     members: [
         {
-         name: "Головний Суддя",
+         name: "Головний Суддя", 
+         nick: "Huhaidjopy",
+         telegram: "https://t.me/juggmydishhhh",
+         avatar: "https://i.postimg.cc/DydnWr82/image-(2).webp"
+        },
+        {
+         name: "Заступник Головного Судді",
          nick: "Caston08963",
          telegram: "https://t.me/Obs1dianch1k",
          avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
         },
         {
-         name: "Заступник Головного Судді",
-         nick: "Huhaidjopy",
-         telegram: "https://t.me/juggmydishhhh",
-         avatar: "https://i.postimg.cc/DydnWr82/image-(2).webp"
+         name: "Суддя",
+         nick: "KILLER_00803",
+         telegram: "https://t.me/Arbuzik2012",
+         avatar: "https://i.postimg.cc/QC4Nfzys/image-(7).webp"
         },
 
     ]
