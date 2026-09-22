@@ -18,10 +18,22 @@ const staffData = {
          avatar: "https://i.postimg.cc/dV4fXFPK/image-(12).webp"
         },
         {
-         name: "Адміністратор",
-         nick: "SIGMA2019827", 
-         telegram: "https://t.me/Shu75422",
-         avatar: "https://i.postimg.cc/Zq48kxsH/image-(2).webp"
+         name: "Адміністратор R3 ранга",
+         nick: "LMxMari", 
+         telegram: "https://t.me/JonDR_9620R",
+         avatar: "https://i.postimg.cc/pTXn7W4b/image-(4).webp"
+        },        
+        {
+         name: "Адміністратор R2 ранга",
+         nick: "Rechs10", 
+         telegram: "https://t.me/minon4ikRexi",
+         avatar: "https://i.postimg.cc/Wbpfng5j/image-(3).webp"
+        },
+        {
+         name: "Адміністратор R2 ранга",
+         nick: "Makarmaka91", 
+         telegram: "https://t.me/zzerbin",
+         avatar: "https://i.postimg.cc/SsvjvWcG/image-(5).webp"
         },
 
     ]
@@ -36,6 +48,12 @@ const staffData = {
          nick: "Caston08963",
          telegram: "https://t.me/Obs1dianch1k",
          avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
+        },
+        {
+         name: "Заступник Головного Судді",
+         nick: "Huhaidjopy",
+         telegram: "https://t.me/juggmydishhhh",
+         avatar: "https://i.postimg.cc/DydnWr82/image-(2).webp"
         },
 
     ]
@@ -85,12 +103,7 @@ const staffData = {
   dsn: {
     title: "ДСНС",
     members: [
-        {
-         name: "Начальниця ДСНС",
-         nick: "Anya_wuow35",
-         telegram: "https://t.me/Giko_0303",
-         avatar: "https://i.postimg.cc/8c19jvC6/image-(1).webp"
-        },
+
        
     ]
   },
