@@ -1,81 +1,16 @@
 "use strict";
 
-(function autoUpdateOnEntry() {
-  const GUARD_KEY = "autoReloadAt";
-  const GUARD_MS = 60000;
-  const TIMEOUT_MS = 2500;
-  const IMAGE_RE = /\.(png|jpe?g|webp|gif|svg|avif|ico)(\?|$)/i;
+(function autoReloadOnEntry() {
+  const GUARD_KEY = "autoReloadedOnce";
 
   try {
-    const last = Number(sessionStorage.getItem(GUARD_KEY) || 0);
-    if (Date.now() - last < GUARD_MS) return;
+    if (sessionStorage.getItem(GUARD_KEY)) return;
+    sessionStorage.setItem(GUARD_KEY, "1");
   } catch (e) {
     return;
   }
 
-  const found = new Set([location.href.split("#")[0]]);
-  document.querySelectorAll("script[src], link[href], img[src]").forEach((el) => {
-    const u = el.src || el.href;
-    if (u) found.add(u.split("#")[0]);
-  });
-  performance.getEntriesByType("resource").forEach((e) => found.add(e.name.split("#")[0]));
-  const bg = document.querySelector(".bg");
-  if (bg) {
-    for (const m of getComputedStyle(bg).backgroundImage.matchAll(/url\(["']?([^"')]+)["']?\)/g)) {
-      found.add(m[1]);
-    }
-  }
-
-  const urls = [...found].filter((u) => {
-    try { return new URL(u).origin === location.origin; } catch (e) { return false; }
-  });
-
-  const ctl = new AbortController();
-  const timer = setTimeout(() => ctl.abort(), TIMEOUT_MS);
-
-  const signature = (res) => {
-    const tag = res.headers.get("etag") || res.headers.get("last-modified");
-    return tag ? tag.replace(/^W\//, "") : null;
-  };
-
-  async function fileChanged(url) {
-    const [cached, fresh] = await Promise.all([
-      fetch(url, { cache: "force-cache", signal: ctl.signal }),
-      fetch(url, { method: "HEAD", cache: "no-store", priority: "high", signal: ctl.signal })
-    ]);
-    if (!cached.ok || !fresh.ok) return false;
-    const a = signature(cached);
-    const b = signature(fresh);
-    return Boolean(a && b && a !== b);
-  }
-
-  const changed = new Set();
-
-  function anyChanged() {
-    return new Promise((resolve) => {
-      let left = urls.length;
-      if (left === 0) return resolve(false);
-      urls.forEach((u) => {
-        fileChanged(u)
-          .then((ch) => { if (ch) { changed.add(u); resolve(true); } })
-          .catch(() => {})
-          .finally(() => { if (--left === 0) resolve(false); });
-      });
-    });
-  }
-
-  (async () => {
-    try {
-      const has = await anyChanged();
-      clearTimeout(timer);
-      if (!has) return;
-
-      sessionStorage.setItem(GUARD_KEY, String(Date.now()));
-      const toRefresh = urls.filter((u) => changed.has(u) || !IMAGE_RE.test(u));
-      await Promise.all(toRefresh.map((u) => fetch(u, { cache: "reload" }).catch(() => {})));
-      location.reload();
-    } catch (e) {}
-  })();
+  location.reload();
 })();
 
 

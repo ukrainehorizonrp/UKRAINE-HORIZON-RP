@@ -9,7 +9,14 @@ const licensesData = [
       type: "weapon",
       nick: "agency_roblox4",
       validFrom: "20.09.2026",
-      validTo: "20.09.2027"
+      validTo: "20.12.2026"
+     },
+     {
+      number: "03273",
+      type: "weapon",
+      nick: "panba1868",
+      validFrom: "22.09.2026",
+      validTo: "22.12.2026"
      },
 
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
