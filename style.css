@@ -1567,3 +1567,31 @@ img {
         height: 160px;
     }
 }
+/* Контейнер статуса и кнопки */
+.territory-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
+/* Кнопка Орендувати */
+.rent-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #ef4444;
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.rent-btn:hover {
+    background: #dc2626;
+    transform: translateY(-1px);
+}
