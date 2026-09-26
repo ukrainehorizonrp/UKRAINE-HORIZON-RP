@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
+<head> <script src="додати/territories-data.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>UKRAINE HORIZON RP - EH</title>
@@ -74,6 +74,13 @@
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <span class="tab-label">Органи та служби</span>
       </button>
+      <button class="tab-btn" data-tab="territories" type="button" aria-label="Території">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+    </svg>
+    <span class="tab-label">Території</span>
+</button>
       <button class="tab-btn" data-tab="codes" type="button" aria-label="Кодекси">
         <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         <span class="tab-label">Кодекси</span>
@@ -159,7 +166,16 @@
         <button class="review-arrow review-arrow-right" id="reviewNext" type="button" aria-label="Наступний">›</button>
       </div>
 
-    </section>
+    </section> <!-- Секция Території -->
+<section class="tab-content" id="territories">
+    <h2>Території</h2>
+    <div class="search-box">
+        <input type="text" id="territories-search" placeholder="Знайти територію або власника...">
+    </div>
+    <div id="territories-list" class="territories-vertical-list">
+        <!-- Карточки загрузятся автоматически -->
+    </div>
+</section>
 
   </main>
 
