@@ -10,6 +10,20 @@ const licensesData = [
       nick: "agency_roblox4",
       validFrom: "20.09.2026",
       validTo: "20.12.2026"
+     }, 
+   {
+      number: "09436",
+      type: "weapon",
+      nick: "CAXAPOK_QUWI",
+      validFrom: "26.09.2026",
+      validTo: "26.12.2026"
+     },
+   {
+      number: "01874",
+      type: "weapon",
+      nick: " BMW_M5F456",
+      validFrom: "26.09.2026",
+      validTo: "26.12.2026"
      },
      {
       number: "03273",
@@ -18,13 +32,48 @@ const licensesData = [
       validFrom: "22.09.2026",
       validTo: "22.12.2026"
      },
-
+   {
+      number: "06532",
+      type: "weapon",
+      nick: "Pit_uk",
+      validFrom: "26.09.2026",
+      validTo: "26.12.2026"
+     },
+   {
+      number: "07653",
+      type: "weapon",
+      nick: "ilay25250",
+      validFrom: "26.09.2026",
+      validTo: "26.12.2026"
+     },
+   {
+      number: "04385",
+      type: "weapon",
+      nick: "Mykhailo_Zaya1",
+      validFrom: "26.09.2026",
+      validTo: "26.12.2026"
+     },
+   {
+      number: "03139",
+      type: "weapon",
+      nick: "Den45bgg",
+      validFrom: "26.09.2026",
+      validTo: "26.12.2026"
+     },
+  
+  
+  
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
       {
       number: "13298",
       type: "advocate",
       nick: "Zoomsos123",
+     },
+     {
+      number: "19478",
+      type: "advocate",
+      nick: "Caston08963",
      },
      {
       number: "12334",
