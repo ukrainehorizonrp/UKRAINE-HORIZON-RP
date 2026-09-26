@@ -991,3 +991,47 @@ observer.observe(el);
 
 });
 })();
+// --- Раздел Території ---
+const territoriesData = [
+    { title: "База 1", owner: "Невiдомо", price: "—", status: "Вільна" },
+    { title: "База 2", owner: "Невiдомо", price: "—", status: "Вільна" }
+];
+
+function renderTerritories(filter = "") {
+    const container = document.getElementById("territories-list");
+    if (!container) return;
+
+    container.innerHTML = "";
+    const filtered = territoriesData.filter(t => 
+        t.title.toLowerCase().includes(filter.toLowerCase()) || 
+        t.owner.toLowerCase().includes(filter.toLowerCase())
+    );
+
+    if (filtered.length === 0) {
+        container.innerHTML = "<p style='color: #888; text-align: center;'>Нічого не знайдено</p>";
+        return;
+    }
+
+    filtered.forEach(t => {
+        const card = document.createElement("div");
+        card.className = "territory-card";
+        card.innerHTML = `
+            <h3>${t.title}</h3>
+            <p><strong>Власник:</strong> ${t.owner}</p>
+            <p><strong>Ціна:</strong> ${t.price}</p>
+            <span class="status-tag ${t.status === 'Зайнята' ? 'occupied' : 'free'}">${t.status}</span>
+        `;
+        container.appendChild(card);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    renderTerritories();
+
+    const searchInput = document.getElementById("territories-search");
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            renderTerritories(e.target.value);
+        });
+    }
+});
