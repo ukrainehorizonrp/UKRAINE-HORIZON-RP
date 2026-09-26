@@ -1457,7 +1457,7 @@ img {
   opacity: inherit;
   transform: inherit;
 }
-/* --- Стилі для раздела Території --- */
+/* --- Стилі для раздела Території (фото зліва, інфо справа + темний пошук) --- */
 .territories-vertical-list {
     display: flex;
     flex-direction: column;
@@ -1465,14 +1465,39 @@ img {
     margin-top: 20px;
 }
 
-.territory-card {
-    display: flex;
-    flex-direction: column;
+/* Красивое темное поле поиска как в правилах */
+#territories-search {
+    width: 100%;
+    padding: 12px 16px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+#territories-search::placeholder {
+    color: #64748b;
+}
+
+#territories-search:focus {
+    border-color: rgba(239, 68, 68, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Карточки с картинкой слева */
+.territory-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 16px;
-    gap: 10px;
+    padding: 12px;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
@@ -1481,32 +1506,64 @@ img {
     border-color: rgba(239, 68, 68, 0.5);
 }
 
-.territory-card h3 {
-    margin: 0;
-    font-size: 1.2rem;
+.territory-img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.territory-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex-grow: 1;
+}
+
+.territory-title {
+    font-size: 1.1rem;
+    font-weight: 600;
     color: #ffffff;
 }
 
-.territory-card p {
-    margin: 0;
+.territory-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.9rem;
     color: #cbd5e1;
-    font-size: 0.95rem;
 }
 
 .status-tag {
     align-self: flex-start;
     padding: 4px 10px;
     border-radius: 6px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
-}
-
-.status-tag.free {
-    background: rgba(34, 197, 94, 0.2);
-    color: #22c55e;
+    margin-top: 4px;
 }
 
 .status-tag.occupied {
     background: rgba(239, 68, 68, 0.2);
     color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.status-tag.free {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+@media (max-width: 600px) {
+    .territory-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .territory-img {
+        width: 100%;
+        height: 160px;
+    }
 }
