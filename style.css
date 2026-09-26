@@ -1576,22 +1576,43 @@ img {
     flex-wrap: wrap;
 }
 
-/* Кнопка Орендувати */
-.rent-btn {
-    display: inline-flex;
+/* --- Красивая полноценная кнопка Орендувати --- */
+.territory-actions {
+    display: flex;
     align-items: center;
-    gap: 6px;
-    background: #ef4444;
-    color: #ffffff;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s ease, transform 0.2s ease;
+    gap: 10px;
+    margin-top: 8px;
+    flex-wrap: wrap;
 }
 
+a.rent-btn, 
+.rent-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    background: #ef4444 !important;
+    color: #ffffff !important;
+    padding: 6px 14px !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3) !important;
+    transition: all 0.2s ease !important;
+}
+
+a.rent-btn:hover, 
 .rent-btn:hover {
-    background: #dc2626;
-    transform: translateY(-1px);
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.5) !important;
+}
+
+a.rent-btn svg, 
+.rent-btn svg {
+    stroke: #ffffff !important;
 }
