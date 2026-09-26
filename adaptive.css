@@ -485,39 +485,3 @@ gap:10px;
 text-align:center;
 }
 }
-
-/* ===================== ОПТИМІЗАЦІЯ ПРОДУКТИВНОСТІ ===================== */
-
-/* На телефонах і тач-екранах прибираємо важкі blur-ефекти (головна причина лагів) */
-@media (max-width:775px), (hover:none) and (pointer:coarse){
-  .clock,
-  .tab-btn,
-  .tab-content,
-  .rule-card,
-  .role-card,
-  .review-card,
-  .join-box,
-  .text-input,
-  .license-check-box,
-  .organ-card,
-  .modal-overlay,
-  .image-lightbox{
-    -webkit-backdrop-filter:none!important;
-    backdrop-filter:none!important;
-  }
-  .tab-content{
-    background:rgba(12,16,26,.82);
-  }
-  .clock,
-  .modal-overlay,
-  .image-lightbox{
-    background-color:rgba(10,14,22,.88);
-  }
-  /* Фон без filter: затемнення градієнтом замість blur+brightness */
-  .bg{
-    filter:none!important;
-    inset:0!important;
-    background-image:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),url("фото.webp")!important;
-    transition:none!important;
-  }
-}
