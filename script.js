@@ -992,45 +992,46 @@ observer.observe(el);
 });
 })();
 // --- Раздел Території ---
-const territoriesData = [
-    { title: "База 1", owner: "Невiдомо", price: "—", status: "Вільна" },
-    { title: "База 2", owner: "Невiдомо", price: "—", status: "Вільна" }
-];
+function renderTerritories(filterText = '') {
+    const container = document.getElementById('territories-list');
+    if (!container || typeof territoriesData === 'undefined') return;
 
-function renderTerritories(filter = "") {
-    const container = document.getElementById("territories-list");
-    if (!container) return;
+    container.innerHTML = '';
 
-    container.innerHTML = "";
-    const filtered = territoriesData.filter(t => 
-        t.title.toLowerCase().includes(filter.toLowerCase()) || 
-        t.owner.toLowerCase().includes(filter.toLowerCase())
+    const filtered = territoriesData.filter(item => 
+        (item.title && item.title.toLowerCase().includes(filterText.toLowerCase())) ||
+        (item.owner && item.owner.toLowerCase().includes(filterText.toLowerCase()))
     );
 
     if (filtered.length === 0) {
-        container.innerHTML = "<p style='color: #888; text-align: center;'>Нічого не знайдено</p>";
+        container.innerHTML = '<p style="color: #94a3b8; text-align: center;">Територій не знайдено</p>';
         return;
     }
 
-    filtered.forEach(t => {
-        const card = document.createElement("div");
-        card.className = "territory-card";
+    filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'territory-card';
         card.innerHTML = `
-            <h3>${t.title}</h3>
-            <p><strong>Власник:</strong> ${t.owner}</p>
-            <p><strong>Ціна:</strong> ${t.price}</p>
-            <span class="status-tag ${t.status === 'Зайнята' ? 'occupied' : 'free'}">${t.status}</span>
+            <img src="${item.image}" alt="${item.title}" class="territory-img" loading="lazy" onerror="this.src='https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp'">
+            <div class="territory-info">
+                <div class="territory-title">${item.title}</div>
+                <div class="territory-details">
+                    <span><strong>Власник:</strong> ${item.owner}</span>
+                    <span><strong>Термін оренди:</strong> з ${item.startDate} до ${item.endDate}</span>
+                </div>
+                <span class="status-tag ${item.status === 'Зайнята' || item.status === 'Арендовано' ? 'occupied' : 'free'}">${item.status}</span>
+            </div>
         `;
         container.appendChild(card);
     });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     renderTerritories();
 
-    const searchInput = document.getElementById("territories-search");
+    const searchInput = document.getElementById('territories-search');
     if (searchInput) {
-        searchInput.addEventListener("input", (e) => {
+        searchInput.addEventListener('input', (e) => {
             renderTerritories(e.target.value);
         });
     }
