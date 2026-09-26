@@ -1011,15 +1011,32 @@ function renderTerritories(filterText = '') {
     filtered.forEach(item => {
         const card = document.createElement('div');
         card.className = 'territory-card';
+        
+        // Проверка статуса (свободна ли территория)
+        const isFree = item.status === 'Вільна' || item.status === 'Свободна';
+        
+        // Кнопка аренды для свободных территорий
+        const rentButtonHtml = isFree 
+            ? `<a href="https://t.me/UH_Territory_bot" target="_blank" class="rent-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+                </svg>
+                Орендувати
+               </a>`
+            : '';
+
         card.innerHTML = `
             <img src="${item.image}" alt="${item.title}" class="territory-img" loading="lazy" onerror="this.src='https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp'">
             <div class="territory-info">
                 <div class="territory-title">${item.title}</div>
                 <div class="territory-details">
                     <span><strong>Власник:</strong> ${item.owner}</span>
-                    <span><strong>Термін оренди:</strong> з ${item.startDate} до ${item.endDate}</span>
+                    <span><strong>Термін оренди:</strong> з ${item.startDate || '-'} до ${item.endDate || '-'}</span>
                 </div>
-                <span class="status-tag ${item.status === 'Зайнята' || item.status === 'Арендовано' ? 'occupied' : 'free'}">${item.status}</span>
+                <div class="territory-actions">
+                    <span class="status-tag ${isFree ? 'free' : 'occupied'}">${item.status}</span>
+                    ${rentButtonHtml}
+                </div>
             </div>
         `;
         container.appendChild(card);
