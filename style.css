@@ -1457,3 +1457,126 @@ img {
   opacity: inherit;
   transform: inherit;
 }
+
+gap: 12px;
+  min-width: 0;
+}
+
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: #14161e;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.review-meta {
+  min-width: 0;
+}
+
+.review-nick {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.review-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.review-stars {
+  color: #ffca28;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.review-date {
+  font-size: 12px;
+  color: #9aa2b1;
+}
+
+.review-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e2e8f0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.review-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  touch-action: manipulation;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.review-arrow:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+.review-arrow:active {
+  transform: scale(0.95);
+}
+
+/* ===================== Image Lightbox ===================== */
+
+.image-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 200;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+  padding: 20px;
+}
+
+.image-lightbox.active {
+  display: flex;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.image-lightbox img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  transition: transform 0.1s ease-out;
+}
+
+/* ===================== Scroll Animations ===================== */
+
+.animate-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
