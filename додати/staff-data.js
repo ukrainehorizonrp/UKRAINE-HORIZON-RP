@@ -1,21 +1,53 @@
 const staffData = {
 
-   // ==================== МОДЕРАЦІЯ ====================
+const staffData = {
+
+    // ==================== МОДЕРАЦІЯ ====================
     moderation: {
-    title: "Модерація",
-    members: [
-        {
-         name: "Власник Сервера",
-         nick: "Zoomsos123",
-         telegram: "https://t.me/kitsuxen",
-         avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
-        },
-        {
-         name: "Головний Модератор",
-         nick: "sqw1zy_n7",
-         telegram: "https://t.me/sqw1zyxx",
-         avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
-        },
+        title: "Модерація",
+        members: [
+            {
+                name: "Власник Сервера",
+                nick: "Zoomsos123",
+                telegram: "https://t.me/kitsuxen",
+                avatar: "https://i.postimg.cc/Y0qBgcx/image-(3).webp"
+            },
+            {
+                name: "Головний Модератор",
+                nick: "sqw1zy_n7",
+                telegram: "https://t.me/sqw1zyxx",
+                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
+            }
+        ]
+    }, // <-- ОБЯЗАТЕЛЬНО ЗАПЯТАЯ ЗДЕСЬ!
+
+    // ==================== АДМІНІСТРАЦІЯ ====================
+    administration: {
+        title: "Адміністрація",
+        members: [
+            {
+                name: "Адміністратор",
+                nick: "Nickname",
+                telegram: "https://t.me/telegram_nick",
+                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
+            }
+        ]
+    }, // <-- ОБЯЗАТЕЛЬНО ЗАПЯТАЯ ЗДЕСЬ!
+
+    // ==================== НОВЫЙ РАЗДЕЛ ====================
+    customSection: {
+        title: "Новий Розділ",
+        members: [
+            {
+                name: "Посада",
+                nick: "Nickname",
+                telegram: "https://t.me/telegram_nick",
+                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
+            }
+        ]
+    }
+
+};
       
 
   // ==================== АДМІНІСТРАЦІЯ ====================
