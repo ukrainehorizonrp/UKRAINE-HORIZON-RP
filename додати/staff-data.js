@@ -20,36 +20,8 @@ const staffData = {
     ]
 },
 
-    // ==================== АДМІНІСТРАЦІЯ ====================
-    administration: {
-        title: "Адміністрація",
-        members: [
-            {
-                name: "Адміністратор",
-                nick: "Nickname",
-                telegram: "https://t.me/telegram_nick",
-                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
-            }
-        ]
-    }, // <-- ОБЯЗАТЕЛЬНО ЗАПЯТАЯ ЗДЕСЬ!
-
-    // ==================== НОВЫЙ РАЗДЕЛ ====================
-    customSection: {
-        title: "Новий Розділ",
-        members: [
-            {
-                name: "Посада",
-                nick: "Nickname",
-                telegram: "https://t.me/telegram_nick",
-                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
-            }
-        ]
-    }
-
-};
       
-
-  // ==================== АДМІНІСТРАЦІЯ ====================
+   // ==================== АДМІНІСТРАЦІЯ ====================
   administration: {
     title: "Адміністрація",
     members: [
