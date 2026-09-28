@@ -1,7 +1,5 @@
 const staffData = {
 
-const staffData = {
-
     // ==================== МОДЕРАЦІЯ ====================
     moderation: {
         title: "Модерація",
