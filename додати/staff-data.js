@@ -19,7 +19,7 @@ const staffData = {
                 avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
             }
         ]
-    }, // <-- ОБЯЗАТЕЛЬНО ЗАПЯТАЯ ЗДЕСЬ!
+    }, 
 
     // ==================== АДМІНІСТРАЦІЯ ====================
     administration: {
