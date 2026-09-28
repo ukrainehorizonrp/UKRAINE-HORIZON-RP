@@ -1,16 +1,29 @@
 const staffData = {
 
-  // ==================== АДМІНІСТРАЦІЯ ====================
-  administration: {
-    title: "Адміністрація",
+   // ==================== МОДЕРАЦІЯ ====================
+    moderation: {
+    title: "Модерація",
     members: [
-
         {
          name: "Власник Сервера",
          nick: "Zoomsos123",
          telegram: "https://t.me/kitsuxen",
          avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
         },
+        {
+         name: "Головний Модератор",
+         nick: "sqw1zy_n7",
+         telegram: "https://t.me/sqw1zyxx",
+         avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
+        },
+      
+
+  // ==================== АДМІНІСТРАЦІЯ ====================
+  administration: {
+    title: "Адміністрація",
+    members: [
+
+      
         {
          name: "Головний Адміністратор R5 ранга",
          nick: "va1ron4", 
