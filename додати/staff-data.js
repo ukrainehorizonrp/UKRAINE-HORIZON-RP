@@ -15,10 +15,13 @@ const staffData = {
                 nick: "sqw1zy_n7",
                 telegram: "https://t.me/sqw1zyxx",
                 avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
-            }
-        ]
-    },
-    
+
+        }
+    ]
+},
+
+// ==================== АДМІНІСТРАЦІЯ ====================
+administration: {
     // ==================== АДМІНІСТРАЦІЯ ====================
     administration: {
         title: "Адміністрація",
