@@ -8,7 +8,7 @@ const staffData = {
                 name: "Власник Сервера",
                 nick: "Zoomsos123",
                 telegram: "https://t.me/kitsuxen",
-                avatar: "https://i.postimg.cc/Y0qBgcx/image-(3).webp"
+                avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
             },
             {
                 name: "Головний Модератор",
