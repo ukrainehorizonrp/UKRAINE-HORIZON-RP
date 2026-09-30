@@ -1,25 +1,5 @@
 const staffData = {
 
-    // ==================== МОДЕРАЦІЯ ====================
-    moderation: {
-        title: "Модерація",
-        members: [
-            {
-                name: "Власник Сервера",
-                nick: "Zoomsos123",
-                telegram: "https://t.me/kitsuxen",
-                avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
-            },
-            {
-                name: "Головний Модератор",
-                nick: "sqw1zy_n7",
-                telegram: "https://t.me/sqw1zyxx",
-                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
-
-        }
-    ]
-},
-
       
    // ==================== АДМІНІСТРАЦІЯ ====================
   administration: {
@@ -27,26 +7,33 @@ const staffData = {
     members: [
 
       
-        {
-         name: "Головний Адміністратор R5 ранга",
-         nick: "va1ron4", 
-         telegram: "https://t.me/cryptoqwee",
-         avatar: "https://i.postimg.cc/7hmrxT3j/image-(6).webp"
+            {
+                name: "Власник Сервера",
+                nick: "Zoomsos123",
+                telegram: "https://t.me/kitsuxen",
+                avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
+            },
+            {
+                name: "Головний Адміністратор",
+                nick: "sqw1zy_n7",
+                telegram: "https://t.me/sqw1zyxx",
+                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
+
         },
         {
-         name: "Інспектор Службового Контролю (ІСК) R4 ранга",
+         name: "Інспектор Службового Контролю (ІСК)",
          nick: "mummu228kuku", 
          telegram: "https://t.me/massiveblick",
          avatar: "https://i.postimg.cc/dV4fXFPK/image-(12).webp"
         },
         {
-         name: "Адміністратор R3 ранга",
+         name: "Старший Адміністратор",
          nick: "LMxMari", 
          telegram: "https://t.me/JonDR_9620R",
          avatar: "https://i.postimg.cc/pTXn7W4b/image-(4).webp"
         },        
         {
-         name: "Адміністратор R2 ранга",
+         name: "Середній Адміністратор",
          nick: "Rechs10", 
          telegram: "https://t.me/minon4ikRexi",
          avatar: "https://i.postimg.cc/Wbpfng5j/image-(3).webp"
