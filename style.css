@@ -382,6 +382,10 @@ img {
   animation-delay: 1.35s;
 }
 
+.tab-btn:nth-child(7) {
+  animation-delay: 1.47s;
+}
+
 .tab-btn:hover {
   background: rgba(255,255,255,0.16);
   color: #ffffff;
@@ -1191,6 +1195,7 @@ img {
 }
 
 .leave-review-btn {
+  display: inline-block;
   background: rgba(77, 159, 255, 0.18);
   border: 1px solid #4d9fff;
   color: #fff;
@@ -1199,7 +1204,11 @@ img {
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  transition: .25s;
+  opacity: 0;
+  transform: translateY(35px) scale(.98);
+  transition:
+    background .25s ease,
+    opacity .7s cubic-bezier(.22,1,.36,1);
 }
 
 .leave-review-btn:hover {

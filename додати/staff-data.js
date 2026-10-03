@@ -7,31 +7,19 @@ const staffData = {
     members: [
 
       
-            {
-                name: "Власник Сервера",
-                nick: "Zoomsos123",
-                telegram: "https://t.me/kitsuxen",
-                avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
-            },
-            {
-                name: "Головний Адміністратор",
-                nick: "sqw1zy_n7",
-                telegram: "https://t.me/sqw1zyxx",
-                avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
+        {
+         name: "Власник Сервера",
+         nick: "Zoomsos123",
+         telegram: "https://t.me/kitsuxen",
+        avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
+        },
+        {
+         name: "Головний Адміністратор",
+         nick: "sqw1zy_n7",
+         telegram: "https://t.me/sqw1zyxx",
+         avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
 
-        },
-        {
-         name: "Інспектор Службового Контролю (ІСК)",
-         nick: "mummu228kuku", 
-         telegram: "https://t.me/massiveblick",
-         avatar: "https://i.postimg.cc/dV4fXFPK/image-(12).webp"
-        },
-        {
-         name: "Старший Адміністратор",
-         nick: "LMxMari", 
-         telegram: "https://t.me/JonDR_9620R",
-         avatar: "https://i.postimg.cc/pTXn7W4b/image-(4).webp"
-        },        
+        },     
         {
          name: "Середній Адміністратор",
          nick: "Rechs10", 
@@ -59,18 +47,23 @@ const staffData = {
          avatar: "https://i.postimg.cc/DydnWr82/image-(2).webp"
         },
         {
-         name: "Заступник Головного Судді",
-         nick: "Caston08963",
-         telegram: "https://t.me/Obs1dianch1k",
-         avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
-        },
-        {
          name: "Суддя",
          nick: "KILLER_00803",
          telegram: "https://t.me/Arbuzik2012",
          avatar: "https://i.postimg.cc/QC4Nfzys/image-(7).webp"
         },
-
+        {
+         name: "Суддя",
+         nick: "CAXAPOK_QUWI",
+         telegram: "https://t.me/Drunov133767524269MedniyBik",
+         avatar: "https://i.postimg.cc/L5qhhzPH/image-(8).webp"
+        },
+        {
+         name: "Охоронець Судда",
+         nick: "Den45bgg",
+         telegram: "https://t.me/byrylkabarabylkaimorskasvinaypom",
+         avatar: "https://i.postimg.cc/SRCs4m8M/image-(31).webp"
+        },
     ]
   },
 
@@ -81,21 +74,15 @@ const staffData = {
     members: [
         {
          name: "Генеральний прокурор",
-         nick: "Pit_uk",
-         telegram: "https://t.me/Erorse",
-         avatar: "https://i.postimg.cc/3WMhkTJK/image-(13).webp"
-        },
-        {
-         name: "Заступник Генерального прокурора",
          nick: "agency_roblox4",
          telegram: "https://t.me/feqohe",
          avatar: "https://i.postimg.cc/zv4n6tbf/image-(3).webp"
         },
         {
          name: "Прокурор",
-         nick: "XxsSashaxxjj",
-         telegram: "https://t.me/XxsSashaxxjj",
-         avatar: "https://i.postimg.cc/NGZJWpwT/image-(4).webp"
+         nick: "Caston08963",
+         telegram: "https://t.me/Obs1dianch1k",
+         avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
         },
        
     ]
@@ -111,12 +98,24 @@ const staffData = {
          telegram: "https://t.me/hosters_full",
          avatar: "https://i.postimg.cc/N0S7TbSq/image-(18).webp"
         },
-       
+        {
+         name: "Голова КОРД",
+         nick: "Yatupoykogdabalans2",
+         telegram: "https://t.me/Lev1af3n",
+         avatar: "https://i.postimg.cc/sgKB6Dsw/image-(9).webp"
+        },
+        {
+         name: "Заступник Голови КОРД",
+         nick: "Sti4kyy",
+         telegram: "https://t.me/Homk1n",
+         avatar: "https://i.postimg.cc/90tXDJfR/image-(10).webp"
+        },
+
     ]
   },
 
-  dsn: {
-    title: "ДСНС",
+  dbr: {
+    title: "ДБР",
     members: [
 
        
@@ -129,7 +128,12 @@ const staffData = {
      title: "Інше",
       members: [
 
-
+        {
+         name: "Контент-Мейкер",
+         nick: "Caston08963",
+         telegram: "https://t.me/Obs1dianch1k",
+         avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
+        },
        
     ]
   },

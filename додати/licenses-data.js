@@ -3,7 +3,6 @@ const licensesData = [
 
   // ==================== ЛІЦЕНЗІЇ НА ЗБРОЮ ====================
 
-     // ВИДАЛЕНО: тип weapon-storage не використовується (запис Zoomsos123, 03398)
      {
       number: "07758",
       type: "weapon",
@@ -11,14 +10,14 @@ const licensesData = [
       validFrom: "20.09.2026",
       validTo: "20.12.2026"
      }, 
-   {
+     {
       number: "09436",
       type: "weapon",
       nick: "CAXAPOK_QUWI",
       validFrom: "26.09.2026",
       validTo: "26.12.2026"
      },
-   {
+     {
       number: "01874",
       type: "weapon",
       nick: " BMW_M5F456",
@@ -32,35 +31,41 @@ const licensesData = [
       validFrom: "22.09.2026",
       validTo: "22.12.2026"
      },
-   {
+     {
       number: "06532",
       type: "weapon",
       nick: "Pit_uk",
       validFrom: "26.09.2026",
       validTo: "26.12.2026"
      },
-   {
+    {
       number: "07653",
       type: "weapon",
       nick: "ilay25250",
       validFrom: "26.09.2026",
       validTo: "26.12.2026"
      },
-   {
+     {
       number: "04385",
       type: "weapon",
       nick: "Mykhailo_Zaya1",
       validFrom: "26.09.2026",
       validTo: "26.12.2026"
      },
-   {
+     {
       number: "03139",
       type: "weapon",
       nick: "Den45bgg",
       validFrom: "26.09.2026",
       validTo: "26.12.2026"
      },
-  
+     {
+      number: "03774",
+      type: "weapon",
+      nick: "Den45bgg",
+      validFrom: "04.10.2026",
+      validTo: "04.01.2027"
+     }, 
   
   
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
@@ -179,6 +184,30 @@ const licensesData = [
       type: "npu",        
       nick: "Matviy105012",          
       rank: "Капрал поліції",         
+    },
+    {
+      number: "35943",     
+      type: "npu",        
+      nick: "Fil_shena20",          
+      rank: "Старший лейтенант поліції",         
+    },
+    {
+      number: "34843",     
+      type: "npu",        
+      nick: "BMW_M5F456",          
+      rank: "Старший лейтенант поліції",         
+    },
+    {
+      number: "38594",     
+      type: "npu",        
+      nick: "Mark_top0408",          
+      rank: "Молодший лейтенант поліції",         
+    },
+    {
+      number: "38445",     
+      type: "npu",        
+      nick: "mastergame100p",          
+      rank: "Старший лейтенант поліції",         
     },
 ];
 

@@ -49,6 +49,7 @@ const TAB_HASH_MAP = {
   home: "rules",
   roles: "role",
   organs: "organs",
+  territories: "territories",
   codes: "codes",
   licenses: "player-information",
   community: "community"
@@ -161,6 +162,8 @@ function restartCardAnimations(container) {
     openTab("licenses", false);
   } else if (hash.startsWith("community")) {
   openTab("community", false);
+  } else if (hash.startsWith("territories")) {
+    openTab("territories", false);
   } else {
     openTab("home", false);
   }
@@ -981,8 +984,9 @@ threshold:.12,
 rootMargin:"0px 0px -60px 0px"
 });
 
+/* .reviews-header прибрано зі списку: він ховав кнопку разом із собою */
 document.querySelectorAll(
-".review-card,.join-box,.license-result-card,.reviews-header,.rules-grid,.roles-grid,.gallery-card"
+".review-card,.join-box,.license-result-card,.rules-grid,.roles-grid,.gallery-card"
 ).forEach(el=>{
 
 el.classList.add("animate-item");
