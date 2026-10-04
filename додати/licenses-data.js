@@ -20,7 +20,7 @@ const licensesData = [
      {
       number: "01874",
       type: "weapon",
-      nick: " BMW_M5F456",
+      nick: "BMW_M5F456",
       validFrom: "26.09.2026",
       validTo: "26.12.2026"
      },
@@ -53,20 +53,19 @@ const licensesData = [
       validTo: "26.12.2026"
      },
      {
-      number: "03139",
-      type: "weapon",
-      nick: "Den45bgg",
-      validFrom: "26.09.2026",
-      validTo: "26.12.2026"
-     },
-     {
       number: "03774",
       type: "weapon",
       nick: "Den45bgg",
       validFrom: "04.10.2026",
       validTo: "04.01.2027"
      }, 
-  
+     {
+      number: "03822",
+      type: "weapon",
+      nick: "ferd1358",
+      validFrom: "04.10.2026",
+      validTo: "04.01.2027"
+     },   
   
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
@@ -91,12 +90,12 @@ const licensesData = [
       nick: "eeeeyegeggegehux",
      },
      {
-      number: "03772",
+      number: "13772",
       type: "advocate",
       nick: "Yffgjjifh",
      },
      {
-      number: "03512",
+      number: "13512",
       type: "advocate",
       nick: "Mykhailo_Zaya1",
      },

@@ -64,6 +64,12 @@ const staffData = {
          telegram: "https://t.me/byrylkabarabylkaimorskasvinaypom",
          avatar: "https://i.postimg.cc/SRCs4m8M/image-(31).webp"
         },
+        {
+         name: "Охоронець Судда",
+         nick: "ferd1358",
+         telegram: "https://t.me/Asta943 ",
+         avatar: "https://i.postimg.cc/KzDWf5Nr/image-(34).webp"
+        },
     ]
   },
 
@@ -117,8 +123,18 @@ const staffData = {
   dbr: {
     title: "ДБР",
     members: [
-
-       
+        {
+         name: "Директор ДБР",
+         nick: "MILDERS67",
+         telegram: "https://t.me/Sasha_3455",
+         avatar: "https://i.postimg.cc/QCs3xt6H/image-(32).webp"
+        },
+        {
+         name: "Заступник Директора ДБР",
+         nick: "Matviy105012",
+         telegram: "https://t.me/NOKIA3310_matvii",
+         avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
+        },       
     ]
   },
 

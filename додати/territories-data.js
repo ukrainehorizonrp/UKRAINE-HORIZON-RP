@@ -53,7 +53,7 @@ const territoriesData = [
         image: "https://i.postimg.cc/yxPJMV0Y/image-(17).webp",
         owner: "Matviy105012",
         startDate: "04.10.2026",
-        endDate: "10.10.2026",
+        endDate: "25.10.2026",
         status: "Зайнята",
     },  
     {
