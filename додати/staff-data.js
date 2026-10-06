@@ -135,6 +135,12 @@ const staffData = {
          telegram: "https://t.me/NOKIA3310_matvii",
          avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
         },       
+        {
+         name: "Працівник ДБР",
+         nick: "Nestor112364",
+         telegram: "https://t.me/brawl_starsiik",
+         avatar: "https://i.postimg.cc/0N86KDzj/image-(35).webp"
+        },           
     ]
   },
 
@@ -146,11 +152,16 @@ const staffData = {
 
         {
          name: "Контент-Мейкер",
-         nick: "Caston08963",
-         telegram: "https://t.me/Obs1dianch1k",
-         avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
-        },
-       
+         nick: "Matviy105012",
+         telegram: "https://t.me/NOKIA3310_matvii",
+         avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
+        },   
+        {
+         name: "Стрімер",
+         nick: "34436euf",
+         telegram: "tg://user?id=7150369516",
+         avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
+        },         
     ]
   },
 
