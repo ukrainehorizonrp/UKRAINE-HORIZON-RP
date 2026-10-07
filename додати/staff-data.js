@@ -14,6 +14,12 @@ const staffData = {
         avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
         },
         {
+         name: "Заступник Власника Сервера",
+         nick: "mummu228kuku",
+         telegram: "https://t.me/massiveblick",
+        avatar: "https://i.postimg.cc/P5w6jwmP/image-(1).webp"
+        },
+        {
          name: "Головний Адміністратор",
          nick: "sqw1zy_n7",
          telegram: "https://t.me/sqw1zyxx",
