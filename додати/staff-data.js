@@ -91,12 +91,23 @@ const staffData = {
          avatar: "https://i.postimg.cc/zv4n6tbf/image-(3).webp"
         },
         {
+         name: "Старший прокурор",
+         nick: "Pit_uk",
+         telegram: "https://t.me/Erorse",
+         avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
+        },       
+        {
          name: "Прокурор",
          nick: "Caston08963",
          telegram: "https://t.me/Obs1dianch1k",
          avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
         },
-       
+        {
+         name: "Стажер-Прокурор",
+         nick: "3cy_77781046",
+         telegram: "https://t.me/ISKODAI",
+         avatar: "https://i.postimg.cc/NfZfC3s7/image-(3).webp"
+        },
     ]
   },
 
@@ -142,11 +153,23 @@ const staffData = {
          avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
         },       
         {
-         name: "Працівник ДБР",
+         name: "Курсант ДБР",
          nick: "Nestor112364",
          telegram: "https://t.me/brawl_starsiik",
          avatar: "https://i.postimg.cc/0N86KDzj/image-(35).webp"
-        },           
+        },      
+        {
+         name: "Курсант ДБР",
+         nick: "lesyadovben1985",
+         telegram: "https://t.me/PamPushL0rd",
+         avatar: "https://i.postimg.cc/q7yLCHRY/image-(5).webp"
+        },    
+        {
+         name: "Курсант ДБР",
+         nick: "panba1868",
+         telegram: "https://t.me/Panda_144444",
+         avatar: "https://i.postimg.cc/qvCc9H8N/image-(6).webp"
+        },                 
     ]
   },
 
