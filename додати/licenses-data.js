@@ -65,7 +65,14 @@ const licensesData = [
       nick: "ferd1358",
       validFrom: "04.10.2026",
       validTo: "04.01.2027"
-     },   
+     },  
+     {
+      number: "03274",
+      type: "weapon",
+      nick: "3cy_77781046",
+      validFrom: "11.10.2026",
+      validTo: "11.01.2027"
+     },  
   
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
@@ -99,7 +106,11 @@ const licensesData = [
       type: "advocate",
       nick: "Mykhailo_Zaya1",
      },
-
+     {
+      number: "13312",
+      type: "advocate",
+      nick: "3cy_77781046",
+     },
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
 
      {
@@ -207,6 +218,12 @@ const licensesData = [
       type: "npu",        
       nick: "mastergame100p",          
       rank: "Старший лейтенант поліції",         
+    },
+    {
+      number: "32744",              
+      type: "npu",
+      nick: "jdjdudhshshdb",          
+      rank: "Старший лейтенант поліції",     
     },
 ];
 

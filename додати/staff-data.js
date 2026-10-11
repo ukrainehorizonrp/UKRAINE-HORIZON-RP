@@ -91,7 +91,7 @@ const staffData = {
          avatar: "https://i.postimg.cc/zv4n6tbf/image-(3).webp"
         },
         {
-         name: "Старший прокурор",
+         name: "Заступник генерального прокурора",
          nick: "Pit_uk",
          telegram: "https://t.me/Erorse",
          avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
