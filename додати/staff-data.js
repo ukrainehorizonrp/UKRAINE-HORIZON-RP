@@ -1,6 +1,5 @@
 const staffData = {
-
-      
+  
    // ==================== АДМІНІСТРАЦІЯ ====================
   administration: {
     title: "Адміністрація",
@@ -134,42 +133,6 @@ const staffData = {
          avatar: "https://i.postimg.cc/90tXDJfR/image-(10).webp"
         },
 
-    ]
-  },
-
-  dbr: {
-    title: "ДБР",
-    members: [
-        {
-         name: "Директор ДБР",
-         nick: "MILDERS67",
-         telegram: "https://t.me/Sasha_3455",
-         avatar: "https://i.postimg.cc/QCs3xt6H/image-(32).webp"
-        },
-        {
-         name: "Заступник Директора ДБР",
-         nick: "Matviy105012",
-         telegram: "https://t.me/NOKIA3310_matvii",
-         avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
-        },       
-        {
-         name: "Курсант ДБР",
-         nick: "Nestor112364",
-         telegram: "https://t.me/brawl_starsiik",
-         avatar: "https://i.postimg.cc/0N86KDzj/image-(35).webp"
-        },      
-        {
-         name: "Курсант ДБР",
-         nick: "lesyadovben1985",
-         telegram: "https://t.me/PamPushL0rd",
-         avatar: "https://i.postimg.cc/q7yLCHRY/image-(5).webp"
-        },    
-        {
-         name: "Курсант ДБР",
-         nick: "panba1868",
-         telegram: "https://t.me/Panda_144444",
-         avatar: "https://i.postimg.cc/qvCc9H8N/image-(6).webp"
-        },                 
     ]
   },
 
