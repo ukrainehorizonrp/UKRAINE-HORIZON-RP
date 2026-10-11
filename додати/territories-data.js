@@ -27,9 +27,9 @@ const territoriesData = [
     {
         title: "Територія біля фермерського магазина",
         image: "https://i.postimg.cc/0QK01Jyh/image-(14).webp",
-        owner: "-",
-        startDate: "",
-        endDate: "",
+        owner: "jdjdudhshshdb",
+        startDate: "11.10.2026",
+        endDate: "25.10.2026",
         status: "Вільна",
     },
     {
