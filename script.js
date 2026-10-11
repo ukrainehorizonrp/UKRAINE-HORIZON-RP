@@ -1060,20 +1060,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+
 (function initVisitCounter() {
   const el = document.getElementById("today-views-count");
   if (!el || window.__willReload) return;
 
-  const BASE = "https://api.counterapi.dev/v2/makar-sozdas-team-5870/uh";
-  const TOKEN = "ut_ndpluSpUwNegUVjaaW8YqXQ7Cwd9OxfDPWJIod5G"; 
+  const WORKER = "https://uh-counter.ukrainehorizonrp.workers.dev";
   const SESSION_FLAG = "visitCounted";
 
   let alreadyCounted = false;
   try { alreadyCounted = !!sessionStorage.getItem(SESSION_FLAG); } catch (e) {}
 
-  fetch(alreadyCounted ? BASE : BASE + "/up", {
-    headers: { "Authorization": "Bearer " + TOKEN }
-  })
+  fetch(alreadyCounted ? WORKER + "/" : WORKER + "/up")
     .then(async r => {
       const text = await r.text();
       console.log("Лічильник: статус", r.status, "відповідь:", text);
