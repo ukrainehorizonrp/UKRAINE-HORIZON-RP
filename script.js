@@ -10,6 +10,7 @@
     return;
   }
 
+  window.__willReload = true;
   location.reload();
 })();
 
@@ -150,7 +151,7 @@ function restartCardAnimations(container) {
     });
   });
 
-  
+
   const hash = getHash();
   if (hash.startsWith("role")) {
     openTab("roles", false);
@@ -212,11 +213,11 @@ function highlightText(text, query) {
   let currentRuleNumber = null;
 
   const BASE_DELAY = 0.15;
-  const STEP_DELAY = 0.12; 
+  const STEP_DELAY = 0.12;
 
-  
+
   const INITIAL_REVEAL_DELAY = 1.3;
-  const INITIAL_STEP_DELAY = 0.12; 
+  const INITIAL_STEP_DELAY = 0.12;
   let isFirstRender = true;
 
   function renderRuleCards() {
@@ -387,9 +388,9 @@ function highlightText(text, query) {
 
 
   const ROLES_INITIAL_REVEAL_DELAY = 1.4;
-  const ROLES_INITIAL_STEP_DELAY = 0.12; 
+  const ROLES_INITIAL_STEP_DELAY = 0.12;
   const ROLES_BASE_DELAY = 0.15;
-  const ROLES_STEP_DELAY = 0.12; 
+  const ROLES_STEP_DELAY = 0.12;
   let rolesIsFirstRender = true;
 
   function renderRoleCards() {
@@ -470,7 +471,7 @@ function highlightText(text, query) {
     return;
   }
 
-  
+
   function renderSectionText(text) {
     const parts = text.split("\n\n").map(p => p.trim()).filter(Boolean);
     const isNumberedList = parts.length > 1 && parts.every(p => /^\d+\.\s/.test(p));
@@ -487,7 +488,7 @@ function highlightText(text, query) {
     const organ = organsData[index];
     if (!organ) return;
 
-  
+
     organCard.classList.remove("active");
     void organCard.offsetWidth;
 
@@ -685,7 +686,7 @@ function highlightText(text, query) {
     renderCodeGrid(btn.dataset.key, false);
   });
 
-  
+
   const hash = getHash();
   if (hash.startsWith("codes") && hash.length > "codes".length) {
     const rest = hash.replace("codes", "");
@@ -933,7 +934,7 @@ const sequence=[
 "#organs",
 "#codes",
 "#licenses",
-"#community"      
+"#community"
 ];
 
 sequence.forEach(selector=>{
@@ -995,14 +996,15 @@ observer.observe(el);
 
 });
 })();
-// --- Раздел Території ---
+
+// --- Розділ Території ---
 function renderTerritories(filterText = '') {
     const container = document.getElementById('territories-list');
     if (!container || typeof territoriesData === 'undefined') return;
 
     container.innerHTML = '';
 
-    const filtered = territoriesData.filter(item => 
+    const filtered = territoriesData.filter(item =>
         (item.title && item.title.toLowerCase().includes(filterText.toLowerCase())) ||
         (item.owner && item.owner.toLowerCase().includes(filterText.toLowerCase()))
     );
@@ -1015,12 +1017,12 @@ function renderTerritories(filterText = '') {
     filtered.forEach(item => {
         const card = document.createElement('div');
         card.className = 'territory-card';
-        
-        // Проверка статуса (свободна ли территория)
+
+        // Перевірка статусу (чи вільна територія)
         const isFree = item.status === 'Вільна' || item.status === 'Свободна';
-        
-        // Кнопка аренды для свободных территорий
-        const rentButtonHtml = isFree 
+
+        // Кнопка оренди для вільних територій
+        const rentButtonHtml = isFree
             ? `<a href="https://t.me/UH_Territory_bot" target="_blank" class="rent-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
@@ -1057,3 +1059,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+// --- Загальний лічильник відвідувань (раз на сесію, CounterAPI v2) ---
+(function initVisitCounter() {
+  const el = document.getElementById("today-views-count");
+  if (!el || window.__willReload) return;
+
+  const BASE = "https://api.counterapi.dev/v2/makar-sozdas-team-5870/uh";
+  const TOKEN = "ВАШ_ТОКЕН"; // <-- встав сюди свій токен (права Read + Write)
+  const SESSION_FLAG = "visitCounted";
+
+  let alreadyCounted = false;
+  try { alreadyCounted = !!sessionStorage.getItem(SESSION_FLAG); } catch (e) {}
+
+  fetch(alreadyCounted ? BASE : BASE + "/up", {
+    headers: { "Authorization": "Bearer " + TOKEN }
+  })
+    .then(r => r.json())
+    .then(data => {
+      console.log("Відповідь лічильника:", data);
+
+      const raw = data.count ?? data.value ?? (data.data && (data.data.up_count ?? data.data.count));
+      const num = Number(raw);
+
+      if (raw === undefined || raw === null || Number.isNaN(num)) {
+        el.textContent = "—";
+        return;
+      }
+
+      el.textContent = num.toLocaleString("uk-UA");
+      try { sessionStorage.setItem(SESSION_FLAG, "1"); } catch (e) {}
+    })
+    .catch(() => {
+      el.textContent = "—";
+    });
+})();
