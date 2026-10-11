@@ -1061,37 +1061,42 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
 (function initVisitCounter() {
   const el = document.getElementById("today-views-count");
   if (!el || window.__willReload) return;
 
   const WORKER = "https://uh-counter.ukrainehorizonrp.workers.dev";
   const SESSION_FLAG = "visitCounted";
+  const POLL_MS = 10000;
+  
+  function show(n) {
+    el.textContent = Number(n).toLocaleString("uk-UA");
+  }
+
+  async function load(path) {
+    const r = await fetch(WORKER + path, { cache: "no-store" });
+    const data = await r.json();
+    if (typeof data.count !== "number") throw new Error("no count");
+    return data.count;
+  }
 
   let alreadyCounted = false;
   try { alreadyCounted = !!sessionStorage.getItem(SESSION_FLAG); } catch (e) {}
 
-  fetch(alreadyCounted ? WORKER + "/" : WORKER + "/up")
-    .then(async r => {
-      const text = await r.text();
-      console.log("Лічильник: статус", r.status, "відповідь:", text);
-
-      let data;
-      try { data = JSON.parse(text); } catch (e) { el.textContent = "—"; return; }
-
-      const raw = data.count ?? data.value ?? (data.data && (data.data.up_count ?? data.data.count));
-      const num = Number(raw);
-
-      if (raw === undefined || raw === null || Number.isNaN(num)) {
-        el.textContent = "—";
-        return;
-      }
-
-      el.textContent = num.toLocaleString("uk-UA");
+ 
+  load(alreadyCounted ? "/" : "/up")
+    .then(n => {
+      show(n);
       try { sessionStorage.setItem(SESSION_FLAG, "1"); } catch (e) {}
     })
-    .catch(err => {
-      console.error("Лічильник: запит не пройшов:", err);
-      el.textContent = "—";
-    });
+    .catch(() => { el.textContent = "—"; });
+
+
+  function refresh() {
+    if (document.hidden) return;
+    load("/").then(show).catch(() => {});
+  }
+  setInterval(refresh, POLL_MS);
+  document.addEventListener("visibilitychange", refresh);
 })();
