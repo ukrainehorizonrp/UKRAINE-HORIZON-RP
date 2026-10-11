@@ -1060,14 +1060,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-// --- Загальний лічильник відвідувань (раз на сесію, CounterAPI v2) ---
 (function initVisitCounter() {
   const el = document.getElementById("today-views-count");
   if (!el || window.__willReload) return;
 
   const BASE = "https://api.counterapi.dev/v2/makar-sozdas-team-5870/uh";
-  const TOKEN = "ВАШ_ТОКЕН"; // <-- встав сюди свій токен (права Read + Write)
+  const TOKEN = "ut_ndpluSpUwNegUVjaaW8YqXQ7Cwd9OxfDPWJIod5G"; 
   const SESSION_FLAG = "visitCounted";
 
   let alreadyCounted = false;
@@ -1076,9 +1074,12 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch(alreadyCounted ? BASE : BASE + "/up", {
     headers: { "Authorization": "Bearer " + TOKEN }
   })
-    .then(r => r.json())
-    .then(data => {
-      console.log("Відповідь лічильника:", data);
+    .then(async r => {
+      const text = await r.text();
+      console.log("Лічильник: статус", r.status, "відповідь:", text);
+
+      let data;
+      try { data = JSON.parse(text); } catch (e) { el.textContent = "—"; return; }
 
       const raw = data.count ?? data.value ?? (data.data && (data.data.up_count ?? data.data.count));
       const num = Number(raw);
@@ -1091,7 +1092,8 @@ document.addEventListener('DOMContentLoaded', () => {
       el.textContent = num.toLocaleString("uk-UA");
       try { sessionStorage.setItem(SESSION_FLAG, "1"); } catch (e) {}
     })
-    .catch(() => {
+    .catch(err => {
+      console.error("Лічильник: запит не пройшов:", err);
       el.textContent = "—";
     });
 })();
