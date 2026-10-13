@@ -26,6 +26,13 @@ const staffData = {
 
         },     
         {
+         name: "Заступник Головного Адміністратора",
+         nick: "kolopohv",
+         telegram: "https://t.me/KaiiroGlol",
+         avatar: "https://i.postimg.cc/BnVTpFLn/no-Filter-(1).png"
+
+        },     
+        {
          name: "Середній Адміністратор",
          nick: "Rechs10", 
          telegram: "https://t.me/minon4ikRexi",
