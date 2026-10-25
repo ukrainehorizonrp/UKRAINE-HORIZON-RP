@@ -13,12 +13,6 @@ const staffData = {
         avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
         },
         {
-         name: "Заступник Власника Сервера",
-         nick: "mummu228kuku",
-         telegram: "https://t.me/massiveblick",
-        avatar: "https://i.postimg.cc/P5w6jwmP/image-(1).webp"
-        },
-        {
          name: "Головний Адміністратор",
          nick: "sqw1zy_n7",
          telegram: "https://t.me/sqw1zyxx",
@@ -59,6 +53,12 @@ const staffData = {
          avatar: "https://i.postimg.cc/DydnWr82/image-(2).webp"
         },
         {
+         name: "Заступник Головного Судді",
+         nick: "mummu228kuku",
+         telegram: "https://t.me/massiveblick",
+        avatar: "https://i.postimg.cc/P5w6jwmP/image-(1).webp"
+        },
+        {
          name: "Суддя",
          nick: "KILLER_00803",
          telegram: "https://t.me/Arbuzik2012",
@@ -71,6 +71,12 @@ const staffData = {
          avatar: "https://i.postimg.cc/L5qhhzPH/image-(8).webp"
         },
         {
+         name: "Державний Адвокат",
+         nick: "ulec9381",
+         telegram: "https://t.me/Vanidzon",
+         avatar: "https://i.postimg.cc/1tm0fwFd/image-(8).webp"
+        },
+        {
          name: "Охоронець Судда",
          nick: "Den45bgg",
          telegram: "https://t.me/byrylkabarabylkaimorskasvinaypom",
@@ -78,9 +84,9 @@ const staffData = {
         },
         {
          name: "Охоронець Судда",
-         nick: "ferd1358",
-         telegram: "https://t.me/Asta943 ",
-         avatar: "https://i.postimg.cc/KzDWf5Nr/image-(34).webp"
+         nick: "Asdachka",
+         telegram: "https://t.me/Burmalda6714884252",
+         avatar: "https://i.postimg.cc/26WYLLfB/image-(7).webp"
         },
     ]
   },
@@ -151,9 +157,9 @@ const staffData = {
 
         {
          name: "Контент-Мейкер",
-         nick: "Matviy105012",
-         telegram: "https://t.me/NOKIA3310_matvii",
-         avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
+         nick: "YTNEON_2",
+         telegram: "https://t.me/userh1peckiy",
+         avatar: "https://i.postimg.cc/BvkLGFg5/image-(9).webp"
         },   
         {
          name: "Стрімер",
@@ -161,6 +167,18 @@ const staffData = {
          telegram: "tg://user?id=7150369516",
          avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
         },         
+        {
+         name: "Стрімер",
+         nick: "Yffgjjifh",
+         telegram: "tg://t.me/Yarik4h",
+         avatar: "https://i.postimg.cc/9MmSC4QQ/image-(10).webp"
+        },  
+        {
+         name: "Стрімер",
+         nick: "Dariysmertnk",
+         telegram: "tg://t.me/dariysmertnk",
+         avatar: "https://i.postimg.cc/dtw9XM34/image-(11).webp"
+        },  
     ]
   },
 

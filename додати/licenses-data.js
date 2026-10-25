@@ -60,20 +60,19 @@ const licensesData = [
       validTo: "04.01.2027"
      }, 
      {
-      number: "03822",
-      type: "weapon",
-      nick: "ferd1358",
-      validFrom: "04.10.2026",
-      validTo: "04.01.2027"
-     },  
-     {
       number: "03274",
       type: "weapon",
       nick: "3cy_77781046",
       validFrom: "11.10.2026",
       validTo: "11.01.2027"
      },  
-  
+     {
+      number: "03574",
+      type: "weapon",
+      nick: "Asdachka",
+      validFrom: "25.10.2026",
+      validTo: "25.01.2027"
+     }, 
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
       {
@@ -109,6 +108,11 @@ const licensesData = [
      {
       number: "13312",
       type: "advocate",
+      nick: "3cy_77781046",
+     },
+     {
+      number: "14763",
+      type: "ulec9381",
       nick: "3cy_77781046",
      },
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
