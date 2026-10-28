@@ -25,20 +25,38 @@ const staffData = {
          telegram: "https://t.me/KaiiroGlol",
          avatar: "https://i.postimg.cc/BnVTpFLn/no-Filter-(1).png"
 
-        },     
-        {
-         name: "Середній Адміністратор",
-         nick: "Rechs10", 
-         telegram: "https://t.me/minon4ikRexi",
-         avatar: "https://i.postimg.cc/Wbpfng5j/image-(3).webp"
-        },
-        {
-         name: "Адміністратор R2 ранга",
+        },  
+      {
+         name: "Інспектор Службового Контролю (ІСК)",
          nick: "Makarmaka91", 
          telegram: "https://t.me/zzerbin",
          avatar: "https://i.postimg.cc/SsvjvWcG/image-(5).webp"
         },
-
+        {
+         name: "Старший Адміністратор",
+         nick: "Rechs10", 
+         telegram: "https://t.me/minon4ikRexi",
+         avatar: "https://i.postimg.cc/Wbpfng5j/image-(3).webp"
+        },
+       {
+         name: "Старший Адміністратор",
+         nick: "Po_po171", 
+         telegram: "https://t.me/Fola1d",
+         avatar: "https://i.postimg.cc/QCJn5K4z/no-Filter.png"
+        },
+       {
+         name: "Адміністратор-Патрульний",
+         nick: "CAXAPOK_QUWI", 
+         telegram: "https://t.me/Drunov133767524269MedniyBik",
+         avatar: "https://i.postimg.cc/6QS3Jyhr/no-Filter-(1).png"
+        },
+      {
+         name: "Адміністратор-Патрульний",
+         nick: "eeeeyegeggegehux", 
+         telegram: "https://t.me/JonDR_9620R",
+         avatar: "https://i.postimg.cc/Df698R9v/no-Filter-(2).png"
+        },
+       
     ]
   },
 
@@ -178,6 +196,12 @@ const staffData = {
          nick: "Dariysmertnk",
          telegram: "tg://t.me/dariysmertnk",
          avatar: "https://i.postimg.cc/dtw9XM34/image-(11).webp"
+        },  
+         {
+         name: "Стрімер",
+         nick: "MerryChristmas0137",
+         telegram: "https://t.me/Mykhaely",
+         avatar: "https://i.postimg.cc/sXXpKQgw/no-Filter-(3).png"
         },  
     ]
   },
