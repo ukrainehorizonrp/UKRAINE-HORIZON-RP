@@ -45,13 +45,13 @@ const staffData = {
          avatar: "https://i.postimg.cc/QCJn5K4z/no-Filter.png"
         },
        {
-         name: "Адміністратор-Патрульний",
+         name: "Адміністратор-Комунікатор",
          nick: "CAXAPOK_QUWI", 
          telegram: "https://t.me/Drunov133767524269MedniyBik",
          avatar: "https://i.postimg.cc/6QS3Jyhr/no-Filter-(1).png"
         },
       {
-         name: "Адміністратор-Патрульний",
+         name: "Адміністратор-Патрульний,
          nick: "eeeeyegeggegehux", 
          telegram: "https://t.me/JonDR_9620R",
          avatar: "https://i.postimg.cc/Df698R9v/no-Filter-(2).png"
@@ -81,12 +81,6 @@ const staffData = {
          nick: "KILLER_00803",
          telegram: "https://t.me/Arbuzik2012",
          avatar: "https://i.postimg.cc/QC4Nfzys/image-(7).webp"
-        },
-        {
-         name: "Суддя",
-         nick: "CAXAPOK_QUWI",
-         telegram: "https://t.me/Drunov133767524269MedniyBik",
-         avatar: "https://i.postimg.cc/L5qhhzPH/image-(8).webp"
         },
         {
          name: "Державний Адвокат",
