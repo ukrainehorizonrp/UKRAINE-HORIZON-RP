@@ -26,7 +26,7 @@ const staffData = {
          avatar: "https://i.postimg.cc/BnVTpFLn/no-Filter-(1).png"
 
         },  
-      {
+        {
          name: "Інспектор Службового Контролю (ІСК)",
          nick: "Makarmaka91", 
          telegram: "https://t.me/zzerbin",
@@ -50,12 +50,7 @@ const staffData = {
          telegram: "https://t.me/Drunov133767524269MedniyBik",
          avatar: "https://i.postimg.cc/6QS3Jyhr/no-Filter-(1).png"
         },
-      {
-         name: "Адміністратор-Патрульний,
-         nick: "eeeeyegeggegehux", 
-         telegram: "https://t.me/JonDR_9620R",
-         avatar: "https://i.postimg.cc/Df698R9v/no-Filter-(2).png"
-        },
+
        
     ]
   },
@@ -75,12 +70,6 @@ const staffData = {
          nick: "mummu228kuku",
          telegram: "https://t.me/massiveblick",
         avatar: "https://i.postimg.cc/P5w6jwmP/image-(1).webp"
-        },
-        {
-         name: "Суддя",
-         nick: "KILLER_00803",
-         telegram: "https://t.me/Arbuzik2012",
-         avatar: "https://i.postimg.cc/QC4Nfzys/image-(7).webp"
         },
         {
          name: "Державний Адвокат",
@@ -126,12 +115,6 @@ const staffData = {
          telegram: "https://t.me/Obs1dianch1k",
          avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
         },
-        {
-         name: "Стажер-Прокурор",
-         nick: "3cy_77781046",
-         telegram: "https://t.me/ISKODAI",
-         avatar: "https://i.postimg.cc/NfZfC3s7/image-(3).webp"
-        },
     ]
   },
 
@@ -167,17 +150,18 @@ const staffData = {
      title: "Інше",
       members: [
 
+
         {
-         name: "Контент-Мейкер",
-         nick: "YTNEON_2",
-         telegram: "https://t.me/userh1peckiy",
-         avatar: "https://i.postimg.cc/BvkLGFg5/image-(9).webp"
-        },   
+         name: "Стрімер",
+         nick: "Matviy105012",
+         telegram: "tg://t.me/NOKIA3310_matvii",
+         avatar: "https://i.postimg.cc/d3VSf3XC/image-(33).webp"
+        },    
         {
          name: "Стрімер",
          nick: "34436euf",
          telegram: "tg://user?id=7150369516",
-         avatar: "https://i.postimg.cc/j5Hp9Tsf/image-(33).webp"
+         avatar: "https://i.postimg.cc/pTGBpZG8/image.webp"
         },         
         {
          name: "Стрімер",
