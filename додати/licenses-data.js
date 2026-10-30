@@ -73,9 +73,17 @@ const licensesData = [
       validFrom: "25.10.2026",
       validTo: "25.01.2027"
      }, 
+     {
+      number: "02383",
+      type: "weapon",
+      nick: "artemMelnichenko2013",
+      validFrom: "30.10.2026",
+      validTo: "30.01.2027"
+     }, 
+
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
-      {
+     {
       number: "13298",
       type: "advocate",
       nick: "Zoomsos123",
@@ -114,6 +122,16 @@ const licensesData = [
       number: "14763",
       type: "ulec9381",
       nick: "3cy_77781046",
+     },
+     {
+      number: "13848",
+      type: "advocate",
+      nick: "smishaaaa",
+     },
+     {
+      number: "19593",
+      type: "advocate",
+      nick: "artemMelnichenko2013",
      },
  // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
 

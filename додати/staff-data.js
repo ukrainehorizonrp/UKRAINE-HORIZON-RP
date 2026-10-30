@@ -153,9 +153,9 @@ const staffData = {
 
         {
          name: "Контент-Мейкер",
-         nick: "Matviy105012",
-         telegram: "tg://t.me/NOKIA3310_matvii",
-         avatar: "https://i.postimg.cc/d3VSf3XC/image-(33).webp"
+         nick: "Asmanik_offic",
+         telegram: "tg://t.me/Fratinok",
+         avatar: "https://i.postimg.cc/kX6cHpq4/image-(1).webp"
         },    
         {
          name: "Стрімер",
