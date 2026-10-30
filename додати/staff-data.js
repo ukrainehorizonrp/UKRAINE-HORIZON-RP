@@ -152,7 +152,7 @@ const staffData = {
 
 
         {
-         name: "Стрімер",
+         name: "Контент-Мейкер",
          nick: "Matviy105012",
          telegram: "tg://t.me/NOKIA3310_matvii",
          avatar: "https://i.postimg.cc/d3VSf3XC/image-(33).webp"
