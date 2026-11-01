@@ -80,6 +80,13 @@ const licensesData = [
       validFrom: "30.10.2026",
       validTo: "30.01.2027"
      }, 
+     {
+      number: "01883",
+      type: "weapon",
+      nick: "eeeeyegeggegehux",
+      validFrom: "1.11.2026",
+      validTo: "1.02.2027"
+     }, 
 
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 

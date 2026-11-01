@@ -154,10 +154,10 @@ const territoriesData = [
     {
         title: "Територія біля автосалону",
         image: "https://i.postimg.cc/K8dnr8N5/image-(27).webp",
-        owner: "-",
-        startDate: "",
-        endDate: "",
-        status: "Вільна",
+        owner: "olegh34",
+        startDate: "01.11.2026",
+        endDate: "Назавжди",
+        status: "Зайнята",
     },
     {
         title: "Територія біля парку",
