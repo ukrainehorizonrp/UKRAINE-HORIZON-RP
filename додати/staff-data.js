@@ -60,17 +60,17 @@ const staffData = {
     title: "Суд",
     members: [
         {
-         name: "Головний Суддя", 
-         nick: "Huhaidjopy",
-         telegram: "https://t.me/juggmydishhhh",
-         avatar: "https://i.postimg.cc/DydnWr82/image-(2).webp"
-        },
+         name: "Головний Суддя",
+         nick: "Pit_uk",
+         telegram: "https://t.me/Erorse",
+         avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
+        },   
         {
          name: "Заступник Головного Судді",
-         nick: "mummu228kuku",
-         telegram: "https://t.me/massiveblick",
-        avatar: "https://i.postimg.cc/P5w6jwmP/image-(1).webp"
-        },
+         nick: "smishaaaa",
+         telegram: "https://t.me/void_21m",
+         avatar: "https://i.postimg.cc/nL69Zs9g/image-(2).webp"
+        }, 
         {
          name: "Державний Адвокат",
          nick: "ulec9381",
@@ -103,18 +103,8 @@ const staffData = {
          telegram: "https://t.me/feqohe",
          avatar: "https://i.postimg.cc/zv4n6tbf/image-(3).webp"
         },
-        {
-         name: "Заступник генерального прокурора",
-         nick: "Pit_uk",
-         telegram: "https://t.me/Erorse",
-         avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
-        },       
-        {
-         name: "Прокурор",
-         nick: "Caston08963",
-         telegram: "https://t.me/Obs1dianch1k",
-         avatar: "https://i.postimg.cc/HL9rQGz1/image.webp"
-        },
+    
+
     ]
   },
 
@@ -150,13 +140,6 @@ const staffData = {
      title: "Інше",
       members: [
 
-
-        {
-         name: "Контент-Мейкер",
-         nick: "Asmanik_offic",
-         telegram: "tg://t.me/Fratinok",
-         avatar: "https://i.postimg.cc/kX6cHpq4/image-(1).webp"
-        },    
         {
          name: "Стрімер",
          nick: "34436euf",
