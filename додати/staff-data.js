@@ -124,12 +124,6 @@ const staffData = {
          telegram: "https://t.me/Lev1af3n",
          avatar: "https://i.postimg.cc/sgKB6Dsw/image-(9).webp"
         },
-        {
-         name: "Заступник Голови КОРД",
-         nick: "Sti4kyy",
-         telegram: "https://t.me/Homk1n",
-         avatar: "https://i.postimg.cc/90tXDJfR/image-(10).webp"
-        },
 
     ]
   },
@@ -158,11 +152,11 @@ const staffData = {
          telegram: "tg://t.me/dariysmertnk",
          avatar: "https://i.postimg.cc/dtw9XM34/image-(11).webp"
         },  
-         {
+        {
          name: "Стрімер",
-         nick: "MerryChristmas0137",
-         telegram: "https://t.me/Mykhaely",
-         avatar: "https://i.postimg.cc/sXXpKQgw/no-Filter-(3).png"
+         nick: "TDBDGRI",
+         telegram: "tg://t.me/DFREP22",
+         avatar: "https://i.postimg.cc/7hTcpzkQ/image-(3).webp"
         },  
     ]
   },

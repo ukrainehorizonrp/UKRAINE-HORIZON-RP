@@ -87,6 +87,13 @@ const licensesData = [
       validFrom: "1.11.2026",
       validTo: "1.02.2027"
      }, 
+     {
+      number: "05884",
+      type: "weapon",
+      nick: "Po_po171",
+      validFrom: "07.11.2026",
+      validTo: "07.2.2027"
+     }, 
 
  // ==================== ЛІЦЕНЗІЇ АДВОКАТА ====================
 
@@ -259,6 +266,30 @@ const licensesData = [
       type: "npu",
       nick: "Kiril2284868",          
       rank: "Капрал поліції",     
+    },
+    {
+      number: "35644",              
+      type: "npu",
+      nick: "Den45bgg",          
+      rank: "Старший лейтенант поліції",     
+    },
+    {
+      number: "32144",              
+      type: "npu",
+      nick: "jdjdudhshshdb",          
+      rank: "Старший лейтенант поліції",     
+    },
+    {
+      number: "36444",              
+      type: "npu",
+      nick: "gmmmf1224",          
+      rank: "Старший лейтенант поліції",     
+    },
+    {
+      number: "36144",              
+      type: "npu",
+      nick: "gmmmf1224",          
+      rank: "Рядовий поліції",     
     },
 ];
 
