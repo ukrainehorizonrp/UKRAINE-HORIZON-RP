@@ -93,21 +93,6 @@ const staffData = {
   },
 
 
-  // ==================== ПРОКУРАТУРА ====================
-  prosecution: {
-    title: "Прокуратура",
-    members: [
-        {
-         name: "Генеральний прокурор",
-         nick: "agency_roblox4",
-         telegram: "https://t.me/feqohe",
-         avatar: "https://i.postimg.cc/zv4n6tbf/image-(3).webp"
-        },
-    
-
-    ]
-  },
-
   // ==================== НПУ ====================
   npu: {
     title: "НПУ",
