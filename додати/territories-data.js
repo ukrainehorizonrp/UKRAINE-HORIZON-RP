@@ -34,10 +34,10 @@ const territoriesData = [
     {
         title: "Територія біля фермерського магазина",
         image: "https://i.postimg.cc/d1h4Qx4z/image-(12).webp",
-        owner: "-",
-        startDate: "",
-        endDate: "",
-        status: "Вільна",
+        owner: "Den45bgg та ferd1358",
+        startDate: "09.11.2026",
+        endDate: "09.12.2026",
+        status: "Зайнята",
     },
     {
         title: "Територія біля фермерського магазина",
@@ -98,9 +98,9 @@ const territoriesData = [
     {
         title: "Територія біля другого кільця",
         image: "https://i.postimg.cc/dVMMb8Qb/image-(20).webp",
-        owner: "Den45bgg та ferd1358",
-        startDate: "09.11.2026",
-        endDate: "30.11.2026",
+        owner: "",
+        startDate: "01.11.2026",
+        endDate: "01.12.2026",
         status: "Зайнята",
     },
     {

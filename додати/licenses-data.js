@@ -162,17 +162,12 @@ const licensesData = [
       nick: "Yffgjjifh",
      },
      {
-      number: "22333",
+      number: "23333",
       type: "mafia",
-      mafiaName: "Greeks",
-      nick: "Draviks44",
+      mafiaName: "ХАМАС / HAMAS ",
+      nick: "YTNEON_2",
      },
-     {
-      number: "22233",
-      type: "mafia",
-      mafiaName: "Греки",
-      nick: "Draviks44",
-     },
+
      
   // ==================== ЗВАННЯ НПУ ====================
 
