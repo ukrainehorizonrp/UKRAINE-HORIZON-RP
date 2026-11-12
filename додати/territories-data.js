@@ -98,7 +98,7 @@ const territoriesData = [
     {
         title: "Територія біля другого кільця",
         image: "https://i.postimg.cc/dVMMb8Qb/image-(20).webp",
-        owner: "",
+        owner: "eeeeyegeggegehux",
         startDate: "01.11.2026",
         endDate: "01.12.2026",
         status: "Зайнята",
