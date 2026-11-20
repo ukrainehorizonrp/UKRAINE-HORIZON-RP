@@ -48,26 +48,7 @@ const staffData = {
       }
     ]
   },
-
-  // ==================== ПРЕЗИДЕНТ ====================
-  presik: {
-    title: "Призидент",
-    members: [
-      {
-        name: "Призидент",
-        nick: "3cy_77781046",
-        telegram: "https://t.me/ISKODAI",
-        avatar: "https://i.postimg.cc/kgy0DD58/image-(2).webp"
-      },
-      {
-        name: "Заступник Призидента",
-        nick: "Pit_uk",
-        telegram: "https://t.me/Erorse",
-        avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
-      }
-    ]
-  },
-
+  
   // ==================== СУД ====================
   court: {
     title: "Суд",
@@ -98,7 +79,40 @@ const staffData = {
       }
     ]
   },
+  // ==================== ПРЕЗИДЕНТ ====================
+  presik: {
+    title: "Офіс президента",
+    members: [
+      {
+        name: "Призидент",
+        nick: "3cy_77781046",
+        telegram: "https://t.me/ISKODAI",
+        avatar: "https://i.postimg.cc/kgy0DD58/image-(2).webp"
+      },
+      {
+        name: "Керівник Офісу Президента | Заступник Президента",
+        nick: "Pit_uk",
+        telegram: "https://t.me/Erorse",
+        avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
+      },
+      {
+        name: "Секретар Офісу Президента",
+        nick: "777ivan07",
+        telegram: "https://t.me/leleleka_best ",
+        avatar: "https://i.postimg.cc/xTg8Hvg7/image-(4).webp"
+      }
 
+    ]
+  },
+
+  // ==================== ДБР ====================
+
+  dbr: {
+    title: "ДБР",
+    members: [
+
+    ]
+  },
   // ==================== НПУ ====================
   npu: {
     title: "НПУ",
