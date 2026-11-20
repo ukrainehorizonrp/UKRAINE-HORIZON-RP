@@ -60,13 +60,13 @@ const staffData = {
     title: "Суд",
     members: [
         {
-         name: "Головний Суддя",
+         name: "",
          nick: "Pit_uk",
          telegram: "https://t.me/Erorse",
          avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
         },   
         {
-         name: "Заступник Головного Судді",
+         name: "Головний Суддя",
          nick: "smishaaaa",
          telegram: "https://t.me/void_21m",
          avatar: "https://i.postimg.cc/nL69Zs9g/image-(2).webp"
@@ -105,9 +105,15 @@ const staffData = {
         },
         {
          name: "Голова КОРД",
-         nick: "Yatupoykogdabalans2",
-         telegram: "https://t.me/Lev1af3n",
-         avatar: "https://i.postimg.cc/sgKB6Dsw/image-(9).webp"
+         nick: "Sti4kyy",
+         telegram: "https://t.me/Homk1n",
+         avatar: "https://i.postimg.cc/3wt5WzW4/image.webp"
+        },
+        {
+         name: "Заступник Голови КОРД",
+         nick: "Den45bgg",
+         telegram: "https://t.me/byrylkabarabylkaimorskasvinaypom",
+         avatar: "https://i.postimg.cc/PxLXHdKh/image-(1).webp"
         },
 
     ]
