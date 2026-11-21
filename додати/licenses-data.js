@@ -151,7 +151,11 @@ const licensesData = [
       type: "advocate",
       nick: "olegh34",
      },
-
+     {
+      number: "15693",
+      type: "advocate",
+      nick: "Huhaidjop",
+     },
 
   // ==================== ЛІЦЕНЗІЇ НА МАФІЮ ====================
 

@@ -55,28 +55,29 @@ const staffData = {
     members: [
       {
         name: "Головний Суддя",
-        nick: "smishaaaa",
+        nick: "Mykhailo_Zaya1",
         telegram: "https://t.me/void_21m",
-        avatar: "https://i.postimg.cc/nL69Zs9g/image-(2).webp"
+        avatar: "https://i.postimg.cc/Gpdn68QC/image.webp"
+      },
+      {
+        name: "Суддя",
+        nick: "agency_roblox4",
+        telegram: "https://t.me/feqohe",
+        avatar: "https://i.postimg.cc/bYWcpFTq/image-(1).webp"
       },
       {
         name: "Державний Адвокат",
-        nick: "ulec9381",
-        telegram: "https://t.me/Vanidzon",
-        avatar: "https://i.postimg.cc/1tm0fwFd/image-(8).webp"
+        nick: "Huhaidjopy",
+        telegram: "https://t.me/juggmydishhhh",
+        avatar: "https://i.postimg.cc/T18zqKhC/image-(2).webp"
       },
       {
-        name: "Охоронець Судда",
-        nick: "Den45bgg",
-        telegram: "https://t.me/byrylkabarabylkaimorskasvinaypom",
-        avatar: "https://i.postimg.cc/SRCs4m8M/image-(31).webp"
+        name: "Охоронець Суду",
+        nick: "roxbennis12",
+        telegram: "https://t.me/czxn7",
+        avatar: "https://i.postimg.cc/8Cj92R63/image-(3).webp"
       },
-      {
-        name: "Охоронець Судда",
-        nick: "Asdachka",
-        telegram: "https://t.me/Burmalda6714884252",
-        avatar: "https://i.postimg.cc/26WYLLfB/image-(7).webp"
-      }
+
     ]
   },
   // ==================== ПРЕЗИДЕНТ ====================
@@ -151,21 +152,16 @@ const staffData = {
       {
         name: "Стрімер",
         nick: "Yffgjjifh",
-        telegram: "tg://t.me/Yarik4h",
+        telegram: "https://t.me/Yarik4h",
         avatar: "https://i.postimg.cc/9MmSC4QQ/image-(10).webp"
       },
       {
         name: "Стрімер",
         nick: "Dariysmertnk",
-        telegram: "tg://t.me/dariysmertnk",
+        telegram: "https://t.me/dariysmertnk",
         avatar: "https://i.postimg.cc/dtw9XM34/image-(11).webp"
       },
-      {
-        name: "Стрімер",
-        nick: "TDBDGRI",
-        telegram: "tg://t.me/DFREP22",
-        avatar: "https://i.postimg.cc/7hTcpzkQ/image-(3).webp"
-      }
+
     ]
   }
 
