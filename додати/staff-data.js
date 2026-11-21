@@ -84,7 +84,7 @@ const staffData = {
     title: "Офіс президента",
     members: [
       {
-        name: "Призидент",
+        name: "Президент",
         nick: "3cy_77781046",
         telegram: "https://t.me/ISKODAI",
         avatar: "https://i.postimg.cc/kgy0DD58/image-(2).webp"
