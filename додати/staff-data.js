@@ -11,31 +11,25 @@ const staffData = {
         avatar: "https://i.postimg.cc/Y0QgBgcx/image-(3).webp"
       },
       {
-        name: "Головний Адміністратор",
+        name: "Заступник Власника Сервера",
         nick: "sqw1zy_n7",
         telegram: "https://t.me/sqw1zyxx",
         avatar: "https://i.postimg.cc/65ddY5R0/no-Filter.png"
       },
       {
-        name: "Заступник Головного Адміністратора",
-        nick: "kolopohv",
-        telegram: "https://t.me/KaiiroGlol",
-        avatar: "https://i.postimg.cc/BnVTpFLn/no-Filter-(1).png"
-      },
-      {
-        name: "Інспектор Службового Контролю (ІСК)",
-        nick: "Makarmaka91",
-        telegram: "https://t.me/zzerbin",
-        avatar: "https://i.postimg.cc/SsvjvWcG/image-(5).webp"
-      },
-      {
-        name: "Старший Адміністратор",
+        name: "Головний Адміністратор",
         nick: "Rechs10",
         telegram: "https://t.me/minon4ikRexi",
         avatar: "https://i.postimg.cc/Wbpfng5j/image-(3).webp"
       },
       {
-        name: "Старший Адміністратор",
+        name: "Середній Адміністратор",
+        nick: "Makarmaka91",
+        telegram: "https://t.me/zzerbin",
+        avatar: "https://i.postimg.cc/SsvjvWcG/image-(5).webp"
+      },
+      {
+        name: "Середній Адміністратор",
         nick: "Po_po171",
         telegram: "https://t.me/Fola1d",
         avatar: "https://i.postimg.cc/QCJn5K4z/no-Filter.png"
@@ -45,7 +39,13 @@ const staffData = {
         nick: "CAXAPOK_QUWI",
         telegram: "https://t.me/Drunov133767524269MedniyBik",
         avatar: "https://i.postimg.cc/6QS3Jyhr/no-Filter-(1).png"
-      }
+      },
+      {
+        name: "Адміністратор-Патрульний",
+        nick: "evvvyyvvv",
+        telegram: "https://t.me/Orlovskij_M",
+        avatar: "https://i.postimg.cc/yx8K2Y2V/image-(4).webp"
+      },
     ]
   },
   
@@ -71,12 +71,7 @@ const staffData = {
         telegram: "https://t.me/juggmydishhhh",
         avatar: "https://i.postimg.cc/T18zqKhC/image-(2).webp"
       },
-      {
-        name: "Охоронець Суду",
-        nick: "roxbennis12",
-        telegram: "https://t.me/czxn7",
-        avatar: "https://i.postimg.cc/8Cj92R63/image-(3).webp"
-      },
+
 
     ]
   },
@@ -106,12 +101,35 @@ const staffData = {
     ]
   },
 
-  // ==================== ДБР ====================
+  // ==================== НАЗК ====================
 
-  dbr: {
-    title: "ДБР",
+  nazk: {
+    title: "НАЗК",
     members: [
-
+      {
+        name: "Директор НАЗК",
+        nick: "MILDERS67",
+        telegram: "https://t.me/Sasha_3455",
+        avatar: "https://i.postimg.cc/MGN1vCZ9/image.webp"
+      },
+      {
+        name: "Заступник Директора НАЗК",
+        nick: "Matviy105012",
+        telegram: "https://t.me/NOKIA3310_matvii",
+        avatar: "https://i.postimg.cc/c4L6GD0C/image-(1).webp"
+      },
+      {
+        name: "Працівник НАЗК",
+        nick: "Gmmmf1224",
+        telegram: "https://t.me/Myra1274",
+        avatar: "https://i.postimg.cc/L5XSwbLJ/image-(2).webp"
+      },
+      {
+        name: "Працівник НАЗК",
+        nick: "рбpanba1868",
+        telegram: "https://t.me/You_Maincraft",
+        avatar: "https://i.postimg.cc/2yqJ4Rn1/image-(3).webp"
+      },
     ]
   },
   // ==================== НПУ ====================
@@ -125,17 +143,23 @@ const staffData = {
         avatar: "https://i.postimg.cc/N0S7TbSq/image-(18).webp"
       },
       {
-        name: "Голова КОРД",
-        nick: "Sti4kyy",
-        telegram: "https://t.me/Homk1n",
-        avatar: "https://i.postimg.cc/3wt5WzW4/image.webp"
+        name: "Голова ФАНТОМ",
+        nick: "BMW_M5F456",
+        telegram: "https://t.me/ministr_01",
+        avatar: "https://i.postimg.cc/VsX1ZppQ/image-(5).webp"
       },
       {
-        name: "Заступник Голови КОРД",
+        name: "Директор КОРД",
         nick: "Den45bgg",
         telegram: "https://t.me/byrylkabarabylkaimorskasvinaypom",
         avatar: "https://i.postimg.cc/PxLXHdKh/image-(1).webp"
-      }
+      },
+      {
+        name: "Заступник Директора КОРД",
+        nick: "ferd1358",
+        telegram: "https://t.me/Asta943",
+        avatar: "https://i.postimg.cc/FHrLHj3Q/image-(6).webp"
+      },
     ]
   },
 

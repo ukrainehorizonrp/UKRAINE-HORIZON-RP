@@ -16,17 +16,9 @@ const territoriesData = [
         status: "Зайнята",
     },
     {
-        title: "Територія біля автобусної компанії",
-        image: "https://i.postimg.cc/W3PQqzxt/image-(2).webp",
-        owner: "CAXAPOK_QUWI (Євреям)",
-        startDate: "01.11.2026",
-        endDate: "Назавжди",
-        status: "Зайнята",
-    },
-    {
         title: "Територія біля фермерського магазина",
         image: "https://i.postimg.cc/76tMpn4p/image-(11).webp",
-        owner: "smishaaaa",
+        owner: "Mykhailo_Zaya1",
         startDate: "2026.11.20",
         endDate: "2027.01.08",
         status: "Зайнята",
