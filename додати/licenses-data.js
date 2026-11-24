@@ -326,7 +326,7 @@ const licensesData = [
       rank: "Рядовий поліції",
      },
      {
-      number: "32134",
+      number: "32334",
       type: "npu",
       nick: "mjsha427",
       rank: "Рядовий поліції",
