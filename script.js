@@ -192,11 +192,10 @@ function restartCardAnimations(container) {
 
 
 function highlightText(text, query) {
-  const safeText = esc(text);
-  if (!query) return safeText;
-  const escapedQuery = esc(query).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(`(${escapedQuery})`, "gi");
-  return safeText.replace(regex, '<span class="highlight">$1</span>');
+  if (!query) return text;
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(`(${escaped})`, "gi");
+  return text.replace(regex, '<span class="highlight">$1</span>');
 }
 
 (function initRules() {
@@ -233,7 +232,7 @@ function highlightText(text, query) {
       const card = document.createElement("div");
       card.className = "rule-card";
       card.dataset.number = rule.number;
-      card.innerHTML = `<span class="rule-num">${esc(rule.number)}</span> ${esc(rule.title)}`;
+      card.innerHTML = `<span class="rule-num">${rule.number}</span> ${rule.title}`;
       card.addEventListener("click", () => openRuleModal(rule, null));
       rulesGrid.appendChild(card);
       cards.push(card);
@@ -255,7 +254,7 @@ function highlightText(text, query) {
       ).join("");
       const punishment = highlightText(article.punishment, searchQuery);
       const image = article.image
-        ? `<img src="${esc(article.image)}" class="article-image" alt="" loading="lazy" decoding="async">`
+        ? `<img src="${article.image}" class="article-image" alt="" loading="lazy" decoding="async">`
         : "";
 
       return `
@@ -369,7 +368,7 @@ function highlightText(text, query) {
         <div class="staff-member-text">
           <b>${esc(member.name)}</b>
           <span>Username: ${esc(member.nick)}</span><br>
-          <a href="${esc(member.telegram)}" target="_blank" rel="noopener">Telegram</a>
+          <a href="${member.telegram}" target="_blank" rel="noopener">Telegram</a>
         </div>
       </div>
     `;
@@ -494,10 +493,10 @@ function highlightText(text, query) {
     void organCard.offsetWidth;
 
     organCard.innerHTML = `
-      <h3 class="organ-name">${esc(organ.name)}</h3>
+      <h3 class="organ-name">${organ.name}</h3>
       ${organ.sections.map(section => `
         <div class="organ-section">
-          <div class="organ-section-title">${esc(section.title)}</div>
+          <div class="organ-section-title">${section.title}</div>
           <div class="organ-section-text">${renderSectionText(section.text)}</div>
         </div>
       `).join("")}
@@ -510,7 +509,7 @@ function highlightText(text, query) {
   }
 
   organButtons.innerHTML = organsData.map((o, i) =>
-    `<button type="button" class="organ-btn" data-index="${i}">${esc(o.name)}</button>`
+    `<button type="button" class="organ-btn" data-index="${i}">${o.name}</button>`
   ).join("");
 
   animateCardsIn([...organButtons.children], 1.3, 0.08);
@@ -589,7 +588,7 @@ function highlightText(text, query) {
       ).join("");
       const punishment = highlightText(article.punishment, searchQuery);
       const image = article.image
-        ? `<img src="${esc(article.image)}" class="article-image" alt="" loading="lazy" decoding="async">`
+        ? `<img src="${article.image}" class="article-image" alt="" loading="lazy" decoding="async">`
         : "";
 
       return `
@@ -632,7 +631,7 @@ function highlightText(text, query) {
       const card = document.createElement("div");
       card.className = "rule-card";
       card.dataset.number = rule.number;
-      card.innerHTML = `<span class="rule-num">${esc(rule.number)}</span> ${esc(rule.title)}`;
+      card.innerHTML = `<span class="rule-num">${rule.number}</span> ${rule.title}`;
       card.addEventListener("click", () => openCodeArticleModal(rule, null));
       codesGrid.appendChild(card);
       cards.push(card);
@@ -986,6 +985,7 @@ threshold:.12,
 rootMargin:"0px 0px -60px 0px"
 });
 
+/* .reviews-header прибрано зі списку: він ховав кнопку разом із собою */
 document.querySelectorAll(
 ".review-card,.join-box,.license-result-card,.rules-grid,.roles-grid,.gallery-card"
 ).forEach(el=>{
@@ -997,6 +997,7 @@ observer.observe(el);
 });
 })();
 
+// --- Розділ Території ---
 function renderTerritories(filterText = '') {
     const container = document.getElementById('territories-list');
     if (!container || typeof territoriesData === 'undefined') return;
@@ -1009,7 +1010,7 @@ function renderTerritories(filterText = '') {
     );
 
     if (filtered.length === 0) {
-        container.innerHTML = '<p style="color: #94a3b8; text-align: center;">Територій не знайдено</p>';
+        container.innerHTML = '<p class="territories-empty">Територій не знайдено</p>';
         return;
     }
 
@@ -1017,8 +1018,10 @@ function renderTerritories(filterText = '') {
         const card = document.createElement('div');
         card.className = 'territory-card';
 
+        // Перевірка статусу (чи вільна територія)
         const isFree = item.status === 'Вільна' || item.status === 'Свободна';
 
+        // Кнопка оренди для вільних територій
         const rentButtonHtml = isFree
             ? `<a href="https://t.me/UH_Territory_bot" target="_blank" class="rent-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1029,19 +1032,26 @@ function renderTerritories(filterText = '') {
             : '';
 
         card.innerHTML = `
-            <img src="${esc(item.image)}" alt="${esc(item.title)}" class="territory-img" loading="lazy" onerror="this.src='https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp'">
+            <img src="${item.image}" alt="${item.title}" class="territory-img" loading="lazy">
             <div class="territory-info">
-                <div class="territory-title">${esc(item.title)}</div>
+                <div class="territory-title">${item.title}</div>
                 <div class="territory-details">
-                    <span><strong>Власник:</strong> ${esc(item.owner)}</span>
-                    <span><strong>Термін оренди:</strong> з ${esc(item.startDate || '-')} до ${esc(item.endDate || '-')}</span>
+                    <span><strong>Власник:</strong> ${item.owner}</span>
+                    <span><strong>Термін оренди:</strong> з ${item.startDate || '-'} до ${item.endDate || '-'}</span>
                 </div>
                 <div class="territory-actions">
-                    <span class="status-tag ${isFree ? 'free' : 'occupied'}">${esc(item.status)}</span>
+                    <span class="status-tag ${isFree ? 'free' : 'occupied'}">${item.status}</span>
                     ${rentButtonHtml}
                 </div>
             </div>
         `;
+        const territoryImage = card.querySelector('.territory-img');
+        if (territoryImage) {
+            territoryImage.addEventListener('error', () => {
+                territoryImage.src = 'https://i.postimg.cc/MGKQnKVH/file-0000000025e481f68637ad281142736f.webp';
+            }, { once: true });
+        }
+
         container.appendChild(card);
     });
 }
