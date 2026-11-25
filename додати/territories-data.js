@@ -8,6 +8,14 @@ const territoriesData = [
         status: "Зайнята",
     },
     {
+        title: "Тереторія біля ювелірного магазину",
+        image: "https://i.postimg.cc/BbmGt4x7/image.webp",
+        owner: "Належить мафії Most Wanted",
+        startDate: "25.11.2026",
+        endDate: "Назавжди",
+        status: "Зайнята",
+    },
+    {
         title: "Територія біля другого моста + парк",
         image: "https://i.postimg.cc/qqKhbmj1/image-(1).webp",
         owner: "XxsSashaxxjj",
