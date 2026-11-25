@@ -91,12 +91,6 @@ const staffData = {
         telegram: "https://t.me/Erorse",
         avatar: "https://i.postimg.cc/CKkZ4FbP/image-(2).webp"
       },
-      {
-        name: "Секретар Офісу Президента",
-        nick: "777ivan07",
-        telegram: "https://t.me/leleleka_best ",
-        avatar: "https://i.postimg.cc/xTg8Hvg7/image-(4).webp"
-      }
 
     ]
   },
@@ -108,21 +102,9 @@ const staffData = {
     members: [
       {
         name: "Директор НАЗК",
-        nick: "MILDERS67",
-        telegram: "https://t.me/Sasha_3455",
-        avatar: "https://i.postimg.cc/MGN1vCZ9/image.webp"
-      },
-      {
-        name: "Заступник Директора НАЗК",
-        nick: "Matviy105012",
-        telegram: "https://t.me/NOKIA3310_matvii",
-        avatar: "https://i.postimg.cc/c4L6GD0C/image-(1).webp"
-      },
-      {
-        name: "Працівник НАЗК",
-        nick: "Gmmmf1224",
-        telegram: "https://t.me/Myra1274",
-        avatar: "https://i.postimg.cc/L5XSwbLJ/image-(2).webp"
+        nick: "777ivan07",
+        telegram: "https://t.me/leleleka_best ",
+        avatar: "https://i.postimg.cc/xTg8Hvg7/image-(4).webp"
       },
       {
         name: "Працівник НАЗК",

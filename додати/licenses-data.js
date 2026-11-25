@@ -168,8 +168,8 @@ const licensesData = [
      {
       number: "23333",
       type: "mafia",
-      mafiaName: "ХАМАС / HAMAS ",
-      nick: "YTNEON_2",
+      mafiaName: "Most Wanted",
+      nick: "Borus_fed",
      },
 
      
