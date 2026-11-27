@@ -94,26 +94,6 @@ const staffData = {
 
     ]
   },
-
-  // ==================== НАЗК ====================
-
-  nazk: {
-    title: "НАЗК",
-    members: [
-      {
-        name: "Директор НАЗК",
-        nick: "777ivan07",
-        telegram: "https://t.me/leleleka_best ",
-        avatar: "https://i.postimg.cc/xTg8Hvg7/image-(4).webp"
-      },
-      {
-        name: "Працівник НАЗК",
-        nick: "рбpanba1868",
-        telegram: "https://t.me/You_Maincraft",
-        avatar: "https://i.postimg.cc/2yqJ4Rn1/image-(3).webp"
-      },
-    ]
-  },
   // ==================== НПУ ====================
   npu: {
     title: "НПУ",
